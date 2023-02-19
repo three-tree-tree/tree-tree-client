@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/three-tree-tree/tree-tree-client/static/css/main.073c9b0a.css",
+    "main.js": "/three-tree-tree/tree-tree-client/static/js/main.6a6f89d3.js",
+    "static/js/787.28cb0dcd.chunk.js": "/three-tree-tree/tree-tree-client/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.svg": "/three-tree-tree/tree-tree-client/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/three-tree-tree/tree-tree-client/index.html",
+    "main.073c9b0a.css.map": "/three-tree-tree/tree-tree-client/static/css/main.073c9b0a.css.map",
+    "main.6a6f89d3.js.map": "/three-tree-tree/tree-tree-client/static/js/main.6a6f89d3.js.map",
+    "787.28cb0dcd.chunk.js.map": "/three-tree-tree/tree-tree-client/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.6a6f89d3.js"
+  ]
+}
