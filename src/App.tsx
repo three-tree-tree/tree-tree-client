@@ -1,22 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import { CreationPage } from './components/CreationPage';
+import { DeliveryPage } from './components/DeliveryPage';
+import { LandingPage } from './components/LandingPage';
+import { LoadingPage } from './components/LoadingPage';
+import { SelectionPage } from './components/SelectionPage';
+
+export enum PageStatus {
+  LOADING = 'loading-page',
+  LANDING = 'landing-page',
+  SELECTING = 'selection-page',
+  CREATING = 'creation-page',
+  DELIVERYING = 'delivery-page',
+}
 
 function App(): React.ReactElement {
+  const [pageState, setPageState] = useState<PageStatus>(PageStatus.LOADING);
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          안녕하세요 재직톤 6팀의 Tree Tree 입니다
-        </p>
-        <a
-          className="App-link"
-          href="https://www.notion.so/6-1d67c1cc375c42eda3e5fe034427845a"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          재직톤 노션 페이지
-        </a>
-      </header>
+      {pageState === PageStatus.LOADING && (
+        <LoadingPage
+          className="tree-app-page"
+        />
+      )}
+      {pageState === PageStatus.LANDING && (
+        <LandingPage
+          className="tree-app-page"
+        />
+      )}
+      {pageState === PageStatus.SELECTING && (
+        <SelectionPage
+          className="tree-app-page"
+        />
+      )}
+      {pageState === PageStatus.CREATING && (
+        <CreationPage
+          className="tree-app-page"
+        />
+      )}
+      {pageState === PageStatus.DELIVERYING && (
+        <DeliveryPage
+          className="tree-app-page"
+        />
+      )}
     </div>
   );
 }
