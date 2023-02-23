@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageStatus, useGlobalContext } from '../../lib/GlobalContext';
 import { Button } from '../Button';
 import { Icon, IconTypes } from '../Icon';
+import axios from 'axios';
+
 import './index.css';
+
+const SERVER_HOST = "http://localhost:8080"
 
 interface LandingPageProps {
   className?: string;
@@ -12,12 +16,31 @@ export const LandingPage = ({
   className,
 }: LandingPageProps): React.ReactElement => {
   const { setPage } = useGlobalContext();
+  const [peopleCount, setPeopleCount] = useState(undefined);
+
+  useEffect(() => {
+    axios
+      .get(SERVER_HOST + "/people/count")
+      .then((res) => {
+        if (res.data.count > 0) {
+          setPeopleCount(res.data.count);
+        }
+      })
+  })
+
   return (
     <div className={`${className} tree-landing-page`}>
       <Icon
         className='tree-landing-page__title-logo'
         type={IconTypes.TITLE}
       />
+      {
+        peopleCount &&
+        <div>
+          <div> 현재까지 함께한 지구방위대원 </div>
+          <div> {peopleCount} 명 </div>
+        </div>
+      }
       <div style={{
         position: 'relative',
         display: 'flex',
