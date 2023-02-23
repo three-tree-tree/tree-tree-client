@@ -17,7 +17,6 @@ export enum PageStatus {
 function App(): React.ReactElement {
   const [pageState, setPageState] = useState<PageStatus>(PageStatus.LOADING);
 
-  
   return (
     <div className="App">
       {pageState === PageStatus.LOADING && (
