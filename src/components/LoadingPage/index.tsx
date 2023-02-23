@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigator } from '../TemporaryNavigator';
 import './index.css';
 
 interface LoadingPageProps {
@@ -10,7 +11,8 @@ export const LoadingPage = ({
 }: LoadingPageProps): React.ReactElement => {
   return (
     <div className={`${className} tree-loading-page`}>
-      
+      로딩페이지 입니다
+      <Navigator />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigator } from '../TemporaryNavigator';
 import './index.css';
 
 interface LandingPageProps {
@@ -10,7 +11,8 @@ export const LandingPage = ({
 }: LandingPageProps): React.ReactElement => {
   return (
     <div className={`${className} tree-lading-page`}>
-
+      랜딩 페이지 입니다
+      <Navigator />
     </div>
   );
 };

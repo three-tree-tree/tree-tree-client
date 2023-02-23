@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { CreationPage } from './components/CreationPage';
 import { DeliveryPage } from './components/DeliveryPage';
 import { LandingPage } from './components/LandingPage';
 import { LoadingPage } from './components/LoadingPage';
 import { SelectionPage } from './components/SelectionPage';
-
-export enum PageStatus {
-  LOADING = 'loading-page',
-  LANDING = 'landing-page',
-  SELECTING = 'selection-page',
-  CREATING = 'creation-page',
-  DELIVERYING = 'delivery-page',
-}
+import { PageStatus, useGlobalContext } from './lib/GlobalContext';
 
 function App(): React.ReactElement {
-  const [pageState, setPageState] = useState<PageStatus>(PageStatus.LOADING);
+  const { pageState } = useGlobalContext();
 
   return (
     <div className="App">
