@@ -1,3 +1,35 @@
 .tree-selection-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.tree-selection-page__header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.tree-selection-page__header__back-button {
+  margin-left: 20px;
+}
+.tree-selection-page__header__forward-button {
+  margin-right: 20px;
+}
+
+.tree-selection-page__selections {
+  margin-top: 30px;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
 }
