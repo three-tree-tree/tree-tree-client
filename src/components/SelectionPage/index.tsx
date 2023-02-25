@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageStatus, useGlobalContext } from '../../lib/GlobalContext';
-import { Button } from '../Button';
+import { Button, ButtonTypes } from '../Button';
 import { Icon, IconTypes } from '../Icon';
 import './index.css';
 
@@ -24,14 +24,7 @@ export const SelectionPage = ({
         />
         <Icon
           className='tree-selection-page__header__title-logo'
-          type={IconTypes.TITLE}
-        />
-        <Icon
-          className='tree-selection-page__header__forward-button'
-          type={IconTypes.RIGHT_ARROW}
-          onClick={() => {
-            setPage(PageStatus.CREATING)
-          }}
+          type={IconTypes.LOGO}
         />
       </div>
       <div style={{
@@ -49,31 +42,31 @@ export const SelectionPage = ({
       </div>
       <div className='tree-selection-page__selections'>
         <Button
-          value='대중교통 이용하기'
+          type={ButtonTypes.SAVE_PAPER}
           onClick={() => {
             
           }}
         />
         <Button
-          value='플라스틱 사용 줄이기'
+          type={ButtonTypes.REDUCE_TRASH}
           onClick={() => {
 
           }}
         />
         <Button
-          value='에너지 절약하기'
+          type={ButtonTypes.SAVE_ENERGY}
           onClick={() => {
 
           }}
         />
         <Button
-          value='물건 아껴쓰기'
+          type={ButtonTypes.USE_BASKET}
           onClick={() => {
 
           }}
         />
         <Button
-          value='쓰레기 줄이기'
+          type={ButtonTypes.USE_ELEC_RECEIPT}
           onClick={() => {
 
           }}

@@ -1,6 +1,7 @@
 .tree-selection-page {
   position: relative;
   width: 100%;
+  max-width: 600px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,15 +14,13 @@
   width: 100%;
   height: 50px;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
 .tree-selection-page__header__back-button {
-  margin-left: 20px;
-}
-.tree-selection-page__header__forward-button {
-  margin-right: 20px;
+  position: absolute;
+  left: 24px;
 }
 
 .tree-selection-page__selections {

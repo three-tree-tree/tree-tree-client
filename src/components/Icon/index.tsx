@@ -1,9 +1,14 @@
 import React, { useMemo } from 'react';
+import './index.css';
+
+import Logo from './logo.svg'; // 지구방위대
+import LeftArrow from './left-arrow.svg';
+import CurrentMemberCount from './current-member-count.svg'; // 현재까지 참여한 지구 방위대
 
 export const IconTypes = {
-  TITLE: '지구방위대',
+  CURRENT_COUNT: 'CURRENT_COUNT',
+  LOGO: 'LOGO',
   LEFT_ARROW: 'LEFT_ARROW',
-  RIGHT_ARROW: 'RIGHT_ARROW',
 } as const;
 export type IconTypes = typeof IconTypes[keyof typeof IconTypes];
 
@@ -20,35 +25,28 @@ export const Icon = ({
 }: IconProps): React.ReactElement => {
   const iconBody = useMemo(() => {
     switch (type) {
-      case IconTypes.TITLE: {
-        return <span style={{ fontSize: 34 }}>'지구방위대'</span>
+      case IconTypes.LOGO: {
+        return (
+          <img
+            className='tree-icon logo'
+            src={Logo}
+          />
+        )
+      }
+      case IconTypes.CURRENT_COUNT: {
+        return (
+          <img
+            className='tree-icon current-member-count'
+            src={CurrentMemberCount}
+          />
+        )
       }
       case IconTypes.LEFT_ARROW: {
         return (
-          <div style={{
-            width: 36,
-            minHeight: 36,
-            display: 'inline-flex',
-            backgroundColor: 'greenyellow',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-            {'<'}
-          </div>
-        )
-      }
-      case IconTypes.RIGHT_ARROW: {
-        return (
-          <div style={{
-            width: 36,
-            minHeight: 36,
-            display: 'inline-flex',
-            backgroundColor: 'greenyellow',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-            {'>'}
-          </div>
+          <img
+            className='tree-icon left-arrow'
+            src={LeftArrow}
+          />
         )
       }
       default:

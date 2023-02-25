@@ -1,7 +1,8 @@
 .tree-landing-page {
   position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 600px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,9 +11,14 @@
 
 .tree-landing-page__title-logo {
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .tree-landing-page__start-button {
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.tree-landing-page__text-content {
+  margin-top: 34px;
+  width: 300px;
 }

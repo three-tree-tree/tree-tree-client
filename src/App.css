@@ -4,6 +4,12 @@
 
   font-size: calc(10px + 2vmin);
   text-align: center;
-  background-color: #282c34;
-  color: white;
+  background-image: url(./bg-image.png);;
+  background-size: contain;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* background-color: #282c34;
+  color: white; */
 }

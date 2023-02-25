@@ -3,11 +3,12 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
 
-  color: white;
-  font-size: 20px;
-  border: 1px solid white;
-  height: 48px;
-  width: 300px;
-  background-color: pink;
+.tree-button.start-to-join {
+  width: 320px;
+}
+
+.tree-button-source {
+  width: 320px;
 }
