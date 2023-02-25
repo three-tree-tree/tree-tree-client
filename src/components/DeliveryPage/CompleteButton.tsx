@@ -11,7 +11,7 @@ interface CompleteButtonProps {
   popupFun: (open: boolean) => void;
 }
 
-const SERVER_HOST = "http://localhost:8080"
+const SERVER_HOST = "https://wordway.cafe24.com"
 const HASH_TAG_MESSAGE = "#지구방위대_지구를지켜라 #지구방위대캠페인 #환경보호캠페인 #깨끗한지구만들기"
 
 export const CompleteButton = ({

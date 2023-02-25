@@ -9,7 +9,7 @@ import TextContent from './text-content.svg';
 
 import './index.css';
 
-const SERVER_HOST = "http://localhost:8080"
+const SERVER_HOST = "https://wordway.cafe24.com"
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 
 interface LandingPageProps {
