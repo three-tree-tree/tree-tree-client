@@ -1,8 +1,8 @@
 import React from 'react';
-import { PageStatus, useGlobalContext } from '../../lib/GlobalContext';
+import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalContext';
 
 export const Navigator = (): React.ReactElement => {
-  const { setPage } = useGlobalContext();
+  const { setPage } = useGlobalContext() as GlobalContext;
   return (
     <ul>
       <li

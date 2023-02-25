@@ -5,10 +5,10 @@ import { DeliveryPage } from './components/DeliveryPage';
 import { LandingPage } from './components/LandingPage';
 import { LoadingPage } from './components/LoadingPage';
 import { SelectionPage } from './components/SelectionPage';
-import { PageStatus, useGlobalContext } from './lib/GlobalContext';
+import { GlobalContext, PageStatus, useGlobalContext } from './lib/GlobalContext';
 
 function App(): React.ReactElement {
-  const { pageState } = useGlobalContext();
+  const { pageState } = useGlobalContext() as GlobalContext;
 
   return (
     <div className="App">
