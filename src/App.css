@@ -5,7 +5,12 @@
   font-size: calc(10px + 2vmin);
   text-align: center;
   background-image: url(./bg-image.png);;
-  background-size: contain;
+
+  /* Full height */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   position: relative;
   display: flex;

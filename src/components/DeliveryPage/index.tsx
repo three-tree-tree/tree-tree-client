@@ -1,14 +1,15 @@
 import React from 'react';
 import './index.css';
 
-import MainContent from './step-3.svg';
-import ImageBox from './image-box.svg';
 import { Icon, IconTypes } from '../Icon';
+import { Button, ButtonTypes } from '../Button';
 import { PageStatus, useGlobalContext, GlobalContext } from '../../lib/GlobalContext';
 
-import { InstagramButton } from './InstagramButton';
-import { KakaoTalkButton } from './KakaoTalkButton';
-import { SaveImageButton } from './SaveImageButton';
+import { CompleteButton } from './CompleteButton';
+import MainContent from './step-3.svg';
+import ImageBox from './image-box.svg';
+
+const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 
 interface DeliveryPageProps {
   className?: string;
@@ -17,10 +18,11 @@ interface DeliveryPageProps {
 export const DeliveryPage = ({
   className,
 }: DeliveryPageProps): React.ReactElement => {
-  const tempImageBlob = new Blob(["Hello, world!"], {
-    type: "text/plain;charset=utf-8"
-  });
-  const { setPage } = useGlobalContext() as GlobalContext;;
+  const { setPage } = useGlobalContext() as GlobalContext;
+
+  const handleOnClickFeedButton = () => {
+    window.location.replace(INSTAGRAM_FEED_URL); 
+  }
 
   return (
     <div className={`${className} tree-delivery-page`}>
@@ -47,13 +49,12 @@ export const DeliveryPage = ({
           src={ImageBox}
         />
       </div>
-      <div>
-        <InstagramButton className='tree-delivery-page__instagram-button' />
-      </div>
-      <div className='tree-delivery-page__button-wrapper'>
-        <KakaoTalkButton className='tree-delivery-page__button-item' />
-        <SaveImageButton className='tree-delivery-page__button-item' imageFile={tempImageBlob} />
-      </div>
+      <CompleteButton className='tree-delivery-page__instagram-button' />
+      <Button
+        className='tree-delivery-page__feed-button'
+        onClick={handleOnClickFeedButton}
+        type={ButtonTypes.INSTAGRAM_FEED}
+      />
     </div>
   );
 };
