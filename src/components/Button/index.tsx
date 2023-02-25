@@ -39,7 +39,7 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
     case ButtonTypes.START_JOIN: {
       return (
         <img
-          className='tree-button-source start-to-join'
+          className='tree-button-source'
           src={StartJoin}
         />
       )

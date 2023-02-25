@@ -10,12 +10,12 @@
 }
 
 .tree-landing-page__title-logo {
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .tree-landing-page__start-button {
   margin-top: 30px;
+  width: 80%;
 }
 
 .tree-landing-page__text-content {
@@ -34,6 +34,7 @@
 
 .tree-landing-page__feed-button {
   margin-top: 10px;
+  max-width: 80%;
 }
 
 .tree-landing-page__main-content {
