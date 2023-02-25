@@ -9,7 +9,8 @@ import TextContent from './text-content.svg';
 
 import './index.css';
 
-const SERVER_HOST = "http://localhost:8080"
+const SERVER_HOST = "https://wordway.cafe24.com"
+const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 
 interface LandingPageProps {
   className?: string;
@@ -31,20 +32,23 @@ export const LandingPage = ({
       })
   })
 
+  const handleOnClickFeedButton = () => {
+    window.location.replace(INSTAGRAM_FEED_URL); 
+  }
+
   return (
     <div className={`${className} tree-landing-page`}>
-      <Icon
-        className='tree-landing-page__title-logo'
-        type={IconTypes.CURRENT_COUNT}
-      />
-      {
-        peopleCount &&
+      <div style={{ visibility: peopleCount ? "visible" : "hidden" }}>
+        <Icon
+          className='tree-landing-page__title-logo'
+          type={IconTypes.CURRENT_COUNT}
+        />
         <div>
-          <div style={{ color: 'red' }}> {peopleCount} 명 </div>
+          <div className='tree-landing-page__people-count'> {peopleCount}명 </div>
         </div>
-      }
-      <div className='tree-landing-page__main-content'>
-        <MainContent />
+        <div className='tree-landing-page__main-content'>
+          <MainContent />
+        </div>
       </div>
       <Button
         className='tree-landing-page__start-button'
@@ -52,6 +56,11 @@ export const LandingPage = ({
           setPage(PageStatus.SELECTING)
         }}
         type={ButtonTypes.START_JOIN}
+      />
+      <Button
+        className='tree-landing-page__feed-button'
+        onClick={handleOnClickFeedButton}
+        type={ButtonTypes.INSTAGRAM_FEED}
       />
       <div className='tree-landing-page__text-content'>
         <TextContent />

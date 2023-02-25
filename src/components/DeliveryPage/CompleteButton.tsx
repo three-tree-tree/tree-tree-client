@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 import CopyToClipboard from 'react-copy-to-clipboard';
+
+import { Button, ButtonTypes } from '../Button';
+
 import './index.css';
 
 interface CompleteButtonProps {
-  deeplink: string;
-  buttonImage: React.ReactElement;
+  className?: string;
+  popupFun: (open: boolean) => void;
 }
 
-const SERVER_HOST = "http://localhost:8080"
+const SERVER_HOST = "https://wordway.cafe24.com"
 const HASH_TAG_MESSAGE = "#지구방위대_지구를지켜라 #지구방위대캠페인 #환경보호캠페인 #깨끗한지구만들기"
 
 export const CompleteButton = ({
-  deeplink,
-  buttonImage,
+  className,
+  popupFun,
 }: CompleteButtonProps): React.ReactElement => {
     const handleOnCopy = () => {
+      popupFun(true);
+      setTimeout(() => {
+      popupFun(false);
         // visit count ++ 
         postJoin();
         // instagram app link로 이동
-        window.location.replace(deeplink); 
+        window.location.replace("https://www.instagram.com/"); 
+      }, 3000);
     }
 
     const postJoin = () => {
@@ -29,7 +36,11 @@ export const CompleteButton = ({
     
    return (
         <CopyToClipboard text={HASH_TAG_MESSAGE} onCopy={handleOnCopy}>
-            {buttonImage}
+          <Button
+            className={className}
+            onClick={() => {}}
+            type={ButtonTypes.INSTAGRAM_SHARE}
+          />
         </CopyToClipboard>
     );
 };
