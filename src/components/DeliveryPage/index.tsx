@@ -1,8 +1,14 @@
 import React from 'react';
-import { Navigator } from '../TemporaryNavigator';
 import './index.css';
+
+import MainContent from './step-3.svg';
+import ImageBox from './image-box.svg';
+import { Icon, IconTypes } from '../Icon';
+import { PageStatus, useGlobalContext } from '../../lib/GlobalContext';
+
 import { InstagramButton } from './InstagramButton';
 import { KakaoTalkButton } from './KakaoTalkButton';
+import { SaveImageButton } from './SaveImageButton';
 
 interface DeliveryPageProps {
   className?: string;
@@ -11,12 +17,43 @@ interface DeliveryPageProps {
 export const DeliveryPage = ({
   className,
 }: DeliveryPageProps): React.ReactElement => {
+  const tempImageBlob = new Blob(["Hello, world!"], {
+    type: "text/plain;charset=utf-8"
+  });
+  const { setPage } = useGlobalContext();
+
   return (
     <div className={`${className} tree-delivery-page`}>
-      완료 페이지 입니다
-      <InstagramButton />
-      <KakaoTalkButton />
-      <Navigator />
+      <div className='tree-delivery-page__header'>
+        <Icon
+          className='tree-delivery-page__header__back-button'
+          type={IconTypes.LEFT_ARROW}
+          onClick={() => {
+            setPage(PageStatus.CREATING)
+          }}
+        />
+        <Icon
+          className='tree-delivery-page__header__title-logo'
+          type={IconTypes.LOGO}
+        />
+      </div>
+      <img
+        className='tree-delivery-page__main-content'
+        src={MainContent}
+      />
+      <div>
+        <img
+          className='tree-delivery-page__image-box'
+          src={ImageBox}
+        />
+      </div>
+      <div>
+        <InstagramButton className='tree-delivery-page__instagram-button' />
+      </div>
+      <div className='tree-delivery-page__button-wrapper'>
+        <KakaoTalkButton className='tree-delivery-page__button-item' />
+        <SaveImageButton className='tree-delivery-page__button-item' imageFile={tempImageBlob} />
+      </div>
     </div>
   );
 };
