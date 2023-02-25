@@ -4,7 +4,7 @@ import './index.css';
 import MainContent from './step-3.svg';
 import ImageBox from './image-box.svg';
 import { Icon, IconTypes } from '../Icon';
-import { PageStatus, useGlobalContext } from '../../lib/GlobalContext';
+import { PageStatus, useGlobalContext, GlobalContext } from '../../lib/GlobalContext';
 
 import { InstagramButton } from './InstagramButton';
 import { KakaoTalkButton } from './KakaoTalkButton';
@@ -20,7 +20,7 @@ export const DeliveryPage = ({
   const tempImageBlob = new Blob(["Hello, world!"], {
     type: "text/plain;charset=utf-8"
   });
-  const { setPage } = useGlobalContext();
+  const { setPage } = useGlobalContext() as GlobalContext;;
 
   return (
     <div className={`${className} tree-delivery-page`}>
