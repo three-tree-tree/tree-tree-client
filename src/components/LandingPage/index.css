@@ -29,7 +29,8 @@
   -webkit-text-fill-color: rgba(100, 100, 100, 0); /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
-  font-family: 'SDFONT_8230-0';
+  font-family: 'Sandoll GyeokdongGL2';
+  font-weight: 400;
 }
 
 .tree-landing-page__feed-button {
