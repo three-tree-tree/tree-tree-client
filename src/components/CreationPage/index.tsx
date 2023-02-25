@@ -22,7 +22,7 @@ export const CreationPage = ({
           className='tree-creation-page__header__back-button'
           type={IconTypes.LEFT_ARROW}
           onClick={() => {
-            setPage(PageStatus.LANDING)
+            setPage(PageStatus.SELECTING)
           }}
         />
         <Icon
