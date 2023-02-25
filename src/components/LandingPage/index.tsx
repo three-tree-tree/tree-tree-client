@@ -43,10 +43,9 @@ export const LandingPage = ({
           <div style={{ color: 'red' }}> {peopleCount} 명 </div>
         </div>
       }
-      <img
-        className='tree-landing-page__main-content'
-        src={MainContent}
-      />
+      <div className='tree-landing-page__main-content'>
+        <MainContent />
+      </div>
       <Button
         className='tree-landing-page__start-button'
         onClick={() => {
@@ -54,10 +53,9 @@ export const LandingPage = ({
         }}
         type={ButtonTypes.START_JOIN}
       />
-      <img
-        className='tree-landing-page__text-content'
-        src={TextContent}
-      />
+      <div className='tree-landing-page__text-content'>
+        <TextContent />
+      </div>
     </div>
   );
 };

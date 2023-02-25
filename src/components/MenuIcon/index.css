@@ -1,0 +1,36 @@
+.tree-menu-icon {
+  width: 50px;
+}
+
+.tree-fill-color-red [class*='fill'] {
+  fill: #FF3B00;
+  color: #FF3B00;
+}
+.tree-fill-color-orange [class*='fill'] {
+  fill: #FF8B00;
+  color: #FF8B00;
+}
+.tree-fill-color-yellow [class*='fill'] {
+  fill: #FFFF57;
+  color: #FFFF57;
+}
+.tree-fill-color-green [class*='fill'] {
+  fill: #00FF55;
+  color: #00FF55;
+}
+.tree-fill-color-mint [class*='fill'] {
+  fill: #68FEC4;
+  color: #68FEC4;
+}
+.tree-fill-color-blue [class*='fill'] {
+  fill: #09B3FF;
+  color: #09B3FF;
+}
+.tree-fill-color-pink [class*='fill'] {
+  fill: #FF7DC4;
+  color: #FF7DC4;
+}
+.tree-fill-color-purple [class*='fill'] {
+  fill: #E343FF;
+  color: #E343FF;
+}

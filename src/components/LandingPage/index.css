@@ -10,15 +10,19 @@
 }
 
 .tree-landing-page__title-logo {
-  margin-top: 20px;
-  margin-bottom: 80px;
+  margin-top: 6vh;
+  margin-bottom: 14vh;
 }
 
 .tree-landing-page__start-button {
-  margin-top: 30px;
+  margin-top: 3vh;
+}
+
+.tree-landing-page__main-content {
+  width: 800px;
 }
 
 .tree-landing-page__text-content {
-  margin-top: 34px;
-  width: 300px;
+  margin-top: 4vh;
+  width: 800px;
 }

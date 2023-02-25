@@ -47,44 +47,43 @@ export const Icon = ({
   const iconBody = useMemo(() => {
     switch (type) {
       case IconTypes.LOGO: {
-        return (
-          <img
-            className='tree-icon logo'
-            src={Logo}
-          />
-        )
+        return <div className='tree-icon logo'><Logo /></div>
       }
       case IconTypes.CURRENT_COUNT: {
-        return (
-          <img
-            className='tree-icon current-member-count'
-            src={CurrentMemberCount}
-          />
-        )
+        return <div className='tree-icon current-member-count'><CurrentMemberCount /></div>
       }
       case IconTypes.LEFT_ARROW: {
-        return (
-          <img
-            className='tree-icon left-arrow'
-            src={LeftArrow}
-          />
-        )
+        return <div className='tree-icon left-arrow' ><LeftArrow /></div>
       }
       case IconTypes.STEP_1: {
-        return (
-          <img
-            className='tree-icon step-01'
-            src={Step1}
-          />
-        )
+        return <div className='tree-icon'><Step1 /></div>
       }
       case IconTypes.STEP_2: {
-        return (
-          <img
-            className='tree-icon step-01'
-            src={Step2}
-          />
-        )
+        return <div className='tree-icon'><Step2 /></div>
+      }
+      case IconTypes.HAIR: {
+        return <div className='tree-icon creating-box-icon' ><HairIcon /></div>
+      }
+      case IconTypes.HAIR_BLUE: {
+        return <div className='tree-icon creating-box-icon' ><HairBlueIcon /></div>
+      }
+      case IconTypes.SHIRTS: {
+        return <div className='tree-icon creating-box-icon' ><ShirtsIcon /></div>
+      }
+      case IconTypes.SHIRTS_BLUE: {
+        return <div className='tree-icon creating-box-icon' ><ShirtsBlueIcon /></div>
+      }
+      case IconTypes.PANTS: {
+        return <div className='tree-icon creating-box-icon' ><PantsIcon /></div>
+      }
+      case IconTypes.PANTS_BLUE: {
+        return <div className='tree-icon creating-box-icon' ><PnatsBlueIcon /></div>
+      }
+      case IconTypes.SHOES: {
+        return <div className='tree-icon creating-box-icon' ><ShoesIcon /></div>
+      }
+      case IconTypes.SHOES_BLUE: {
+        return <div className='tree-icon creating-box-icon' ><ShoesBlueIcon /></div>
       }
       default:
         return <span style={{ fontSize: 34 }}>'지구방위대'</span>
