@@ -20,7 +20,7 @@ export const LandingPage = ({
   className,
 }: LandingPageProps): React.ReactElement => {
   const { setPage } = useGlobalContext() as GlobalContext;
-  const [peopleCount, setPeopleCount] = useState(1000);
+  const [peopleCount, setPeopleCount] = useState(undefined);
 
   useEffect(() => {
     axios
