@@ -66,3 +66,19 @@
 .tree-delivery-page__feed-button {
   margin-top: 10px;
 }
+
+.tree-delivery-page__popup-modal {
+  width: 90%;
+  max-width: 90%;
+  height: 90%;
+  max-height: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tree-delivery-page__popup-modal_img {
+  width: 100%;
+  margin-top: 20%;
+}

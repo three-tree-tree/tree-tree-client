@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 import { Icon, IconTypes } from '../Icon';
@@ -6,6 +6,7 @@ import { Button, ButtonTypes } from '../Button';
 import { PageStatus, useGlobalContext, GlobalContext } from '../../lib/GlobalContext';
 
 import { CompleteButton } from './CompleteButton';
+import { CompletePopup } from './CompletePopup';
 import MainContent from './step-3.svg';
 import ImageBox from './image-box.svg';
 
@@ -20,8 +21,14 @@ export const DeliveryPage = ({
 }: DeliveryPageProps): React.ReactElement => {
   const { setPage } = useGlobalContext() as GlobalContext;
 
+  const [ openPopUp, setOpenPopUp ] = useState(false);
+
   const handleOnClickFeedButton = () => {
     window.location.replace(INSTAGRAM_FEED_URL); 
+  }
+
+  const handlePopUp = (open: boolean) => {
+    setOpenPopUp(open);
   }
 
   return (
@@ -49,12 +56,13 @@ export const DeliveryPage = ({
           src={ImageBox}
         />
       </div>
-      <CompleteButton className='tree-delivery-page__instagram-button' />
+      <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
       <Button
         className='tree-delivery-page__feed-button'
         onClick={handleOnClickFeedButton}
         type={ButtonTypes.INSTAGRAM_FEED}
       />
+      { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />}
     </div>
   );
 };

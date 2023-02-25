@@ -8,6 +8,7 @@ import './index.css';
 
 interface CompleteButtonProps {
   className?: string;
+  popupFun: (open: boolean) => void;
 }
 
 const SERVER_HOST = "http://localhost:8080"
@@ -15,12 +16,17 @@ const HASH_TAG_MESSAGE = "#지구방위대_지구를지켜라 #지구방위대�
 
 export const CompleteButton = ({
   className,
+  popupFun,
 }: CompleteButtonProps): React.ReactElement => {
     const handleOnCopy = () => {
+      popupFun(true);
+      setTimeout(() => {
+      popupFun(false);
         // visit count ++ 
         postJoin();
         // instagram app link로 이동
         window.location.replace("https://www.instagram.com/"); 
+      }, 2000);
     }
 
     const postJoin = () => {
