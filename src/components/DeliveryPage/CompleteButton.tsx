@@ -5,7 +5,7 @@ import './index.css';
 
 interface CompleteButtonProps {
   deeplink: string;
-  buttonText: string;
+  buttonImage: React.ReactElement;
 }
 
 const SERVER_HOST = "http://localhost:8080"
@@ -13,24 +13,23 @@ const HASH_TAG_MESSAGE = "#지구방위대_지구를지켜라 #지구방위대�
 
 export const CompleteButton = ({
   deeplink,
-  buttonText,
+  buttonImage,
 }: CompleteButtonProps): React.ReactElement => {
-    function onCopy() {
+    const handleOnCopy = () => {
         // visit count ++ 
         postJoin();
         // instagram app link로 이동
         window.location.replace(deeplink); 
     }
 
-    function postJoin() {
+    const postJoin = () => {
         // fire and forget
         axios.post(SERVER_HOST + "/people/join");
     }
-
     
    return (
-      <CopyToClipboard text={HASH_TAG_MESSAGE} onCopy={onCopy}>
-          <button>{buttonText}</button>
-      </CopyToClipboard>
+        <CopyToClipboard text={HASH_TAG_MESSAGE} onCopy={handleOnCopy}>
+            {buttonImage}
+        </CopyToClipboard>
     );
 };

@@ -1,9 +1,17 @@
 import React from 'react';
-import './index.css';
+
+import ButtonImage from './kakao-talk-button.svg'
 import { CompleteButton } from './CompleteButton';
 
-export const KakaoTalkButton = (): React.ReactElement => {
+
+interface KakaoTalkButtonProps {
+   className?: string;
+ }
+
+export const KakaoTalkButton = ({
+   className,
+}: KakaoTalkButtonProps): React.ReactElement => {
    return (
-      <CompleteButton deeplink="kakaotalk://" buttonText="카카오톡 공유하기" />
+      <CompleteButton deeplink="kakaotalk://" buttonImage={<img className={className} src={ButtonImage} />} />
     );
 };

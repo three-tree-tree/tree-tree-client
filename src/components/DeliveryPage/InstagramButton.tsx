@@ -1,9 +1,17 @@
 import React from 'react';
-import './index.css';
+
+import ButtonImage from './instagram-button.svg'
 import { CompleteButton } from './CompleteButton';
 
-export const InstagramButton = (): React.ReactElement => {
+
+interface InstagramButtonProps {
+   className?: string;
+ }
+
+export const InstagramButton = ({
+   className,
+}: InstagramButtonProps): React.ReactElement => {
    return (
-      <CompleteButton deeplink="instagram://" buttonText="인스타그램 공유하기" />
+      <CompleteButton deeplink="instagram://" buttonImage={<img className={className} src={ButtonImage} />} />
     );
 };
