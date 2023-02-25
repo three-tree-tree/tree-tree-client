@@ -44,7 +44,7 @@ export const LandingPage = ({
           type={IconTypes.CURRENT_COUNT}
         />
         <div>
-          <div className='tree-landing-page__people-count'> {peopleCount} 명 </div>
+          <div className='tree-landing-page__people-count'>  1000명 </div>
         </div>
       </div>
       <img
