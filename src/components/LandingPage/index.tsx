@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PageStatus, useGlobalContext } from '../../lib/GlobalContext';
+import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalContext';
 import { Button, ButtonTypes } from '../Button';
 import { Icon, IconTypes } from '../Icon';
 import axios from 'axios';
@@ -18,7 +18,7 @@ interface LandingPageProps {
 export const LandingPage = ({
   className,
 }: LandingPageProps): React.ReactElement => {
-  const { setPage } = useGlobalContext();
+  const { setPage } = useGlobalContext() as GlobalContext;
   const [peopleCount, setPeopleCount] = useState(undefined);
 
   useEffect(() => {

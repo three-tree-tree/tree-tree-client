@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { Dispatch, useReducer, useState } from 'react';
+
+import treeReducer from './dux/reducer';
+import treeInitialState, { InitialState } from './dux/initialState';
 
 export enum PageStatus {
   LOADING = 'loading-page',
@@ -11,15 +14,14 @@ export enum PageStatus {
 export interface GlobalContext {
   pageState: PageStatus,
   setPage: (type: PageStatus) => void;
+  treeStore: InitialState;
+  treeDispatcher: Dispatch<{ type: string, payload: any }>;
 }
 export interface GlobalContextProviderProps {
   children: React.ReactElement;
 }
 
-const GlobalContext = React.createContext({
-  pageState: PageStatus.LANDING,
-  setPage: (_: PageStatus) => {},
-});
+const GlobalContext = React.createContext<GlobalContext | null>(null);
 
 export const useGlobalContext = () => React.useContext(GlobalContext);
 
@@ -27,10 +29,14 @@ export const GlobalContextProvider = ({
   children,
 }: GlobalContextProviderProps): React.ReactElement => {
   const [pageState, setPageState] = useState<PageStatus>(PageStatus.LANDING);
+  const [treeStore, treeDispatcher] = useReducer(treeReducer, treeInitialState);
+
   return (
     <GlobalContext.Provider value={{
       pageState,
       setPage: (type: PageStatus) => setPageState(type),
+      treeStore,
+      treeDispatcher,
     }}>
       {children}
     </GlobalContext.Provider>

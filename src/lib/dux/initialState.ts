@@ -1,9 +1,9 @@
 export enum InterestingIssueType {
-  FOREST = 'forest-and-ozone-layer',
-  MARINE = 'marine-pollution',
-  AIR = 'air-pollution',
-  SEA_LEVEL = 'rising-see-levels',
-  WEATHER = 'unusual-weather-condition',
+  SAVING_PAPER,
+  REDUCING_TRASH,
+  SAVING_ENERGY,
+  USING_BASKET,
+  USING_ELEC_RECEIPT,
 }
 
 export enum HairStyles {
@@ -33,7 +33,7 @@ export interface InitialState {
 }
 
 const initialState: InitialState = {
-  interestingIssueType: InterestingIssueType.FOREST,
+  interestingIssueType: null,
   hairStyle: HairStyles.SHORT_CUT,
   hairColor: HairColors.BLACK,
   topClothes: TopClothes.SHIRTS,
