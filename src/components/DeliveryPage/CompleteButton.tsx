@@ -26,7 +26,7 @@ export const CompleteButton = ({
         postJoin();
         // instagram app link로 이동
         window.location.replace("https://www.instagram.com/"); 
-      }, 2000);
+      }, 3000);
     }
 
     const postJoin = () => {
