@@ -38,50 +38,44 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
   switch (type) {
     case ButtonTypes.START_JOIN: {
       return (
-        <img
-          className='tree-button-source'
-          src={StartJoin}
-        />
+        <div className='tree-button-source start-to-join'>
+          <StartJoin />
+        </div>
       )
     }
     case ButtonTypes.SAVE_PAPER: {
       return (
-        <img
-          className='tree-button-source save-paper'
-          src={disabled ? SavePaperDisabled : SavePaper}
-        />
+        <div className='tree-button-source save-paper'>
+          {disabled ? <SavePaperDisabled /> : <SavePaper /> }
+        </div>
       )
     }
     case ButtonTypes.REDUCE_TRASH: {
       return (
-        <img
-          className='tree-button-source reduce-trash'
-          src={disabled ? ReduceTrashDisabled : ReduceTrash}
-        />
+        <div className='tree-button-source reduce-trash'>
+          {disabled ? <ReduceTrashDisabled /> : <ReduceTrash />}
+        </div>
       )
     }
     case ButtonTypes.SAVE_ENERGY: {
       return (
-        <img
-          className='tree-button-source save-energy'
-          src={disabled ? SaveEnergyDisabled : SaveEnergy}
-        />
+        <div className='tree-button-source save-energy'>
+          {disabled ? <SaveEnergyDisabled /> : <SaveEnergy />}
+        </div>
       )
     }
     case ButtonTypes.USE_BASKET: {
       return (
-        <img
-          className='tree-button-source use-basket'
-          src={disabled ? UseBasketDisabled : UseBasket}
-        />
+        <div className='tree-button-source use-basket'>
+          {disabled ? <UseBasketDisabled /> : <UseBasket />}
+        </div>
       )
     }
     case ButtonTypes.USE_ELEC_RECEIPT: {
       return (
-        <img
-          className='tree-button-source use-elec-receipt'
-          src={disabled ? UseElecReceiptDisabled : UseElecReceipt}
-        />
+        <div className='tree-button-source use-elec-receipt'>
+          {disabled ? <UseElecReceiptDisabled /> : <UseElecReceipt />}
+        </div>
       )
     }
     case ButtonTypes.INSTAGRAM_FEED: {

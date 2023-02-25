@@ -1,5 +1,7 @@
 import { InitialState } from './initialState';
 import * as actionTypes from './actionTypes';
+import { CreatingBoxStatus } from '../../components/CreationPage';
+import { ColorTypes } from '../../components/Colors';
 
 interface ActionInterface {
   type: string;
@@ -17,34 +19,51 @@ export default function reducer(
         interestingIssueType: action.payload,
       };
     }
-    case actionTypes.SELECT_HAIR_STYLE: {
+    case actionTypes.SELECT_ITEM: {
+      const {
+        type,
+        color,
+        number,
+      } = action.payload as { type: CreatingBoxStatus, color: ColorTypes, number: number };
+
+      const newSelection: Record<string, any> = {};
+
+      if (type === CreatingBoxStatus.HAIR) {
+        newSelection.hairStyle = number;
+        newSelection.hairColor = color;
+      }
+      if (type === CreatingBoxStatus.SHIRTS) {
+        newSelection.topClothes = number;
+      }
+      if (type === CreatingBoxStatus.PANTS) {
+        newSelection.bottomClothes = number;
+        newSelection.bottomColor = color;
+      }
+      if (type === CreatingBoxStatus.SHOES) {
+        newSelection.shoesType = number;
+        newSelection.shoesColor = color;
+      }
+
       return {
         ...state,
-        hairStyle: action.payload,
+        ...newSelection,
       };
     }
-    case actionTypes.SELECT_HAIR_COLOR: {
+    case actionTypes.CHANGE_COLOR: {
+      const { type, color } = action.payload;
+      const newSelection: Record<string, any> = {};
+      if (type === CreatingBoxStatus.HAIR) {
+        newSelection.hairColor = color;
+      }
+      if (type === CreatingBoxStatus.PANTS) {
+        newSelection.bottomColor = color;
+      }
+      if (type === CreatingBoxStatus.SHOES) {
+        newSelection.shoesColor = color;
+      }
       return {
         ...state,
-        hairColor: action.payload,
-      };
-    }
-    case actionTypes.SELECT_TOP_CLOTHES: {
-      return {
-        ...state,
-        topClothes: action.payload,
-      };
-    }
-    case actionTypes.SELECT_BOTTOM_CLOTHES: {
-      return {
-        ...state,
-        bottomClothes: action.payload,
-      };
-    }
-    case actionTypes.SELECT_SHOES: {
-      return {
-        ...state,
-        shoesType: action.payload,
+        ...newSelection,
       };
     }
     default:

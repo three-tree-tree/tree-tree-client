@@ -1,17 +1,21 @@
 
 .tree-icon {
-
+  
 }
 
 .tree-icon.current-member-count {
-  margin-top: 40px;
-  width: 230px;
+  margin-top: 3vh;
+  width: 50vw;
 }
 
 .tree-icon.left-arrow {
-  width: 26px;
+  width: 76px;
 }
 
 .tree-icon.logo {
-  width: 100px;
+  width: 280px;
+}
+
+.creating-box-icon {
+  width: 800px;
 }

@@ -9,6 +9,8 @@ import { CompleteButton } from './CompleteButton';
 import { CompletePopup } from './CompletePopup';
 import MainContent from './step-3.svg';
 import ImageBox from './image-box.svg';
+import { Icon, IconTypes } from '../Icon';
+import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalContext';
 
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 
@@ -19,6 +21,9 @@ interface DeliveryPageProps {
 export const DeliveryPage = ({
   className,
 }: DeliveryPageProps): React.ReactElement => {
+  const tempImageBlob = new Blob(["Hello, world!"], {
+    type: "text/plain;charset=utf-8"
+  });
   const { setPage } = useGlobalContext() as GlobalContext;
 
   const [ openPopUp, setOpenPopUp ] = useState(false);

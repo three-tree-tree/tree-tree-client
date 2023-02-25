@@ -1,3 +1,5 @@
+import { ColorTypes } from "../../components/Colors";
+
 export enum InterestingIssueType {
   SAVING_PAPER,
   REDUCING_TRASH,
@@ -6,39 +8,28 @@ export enum InterestingIssueType {
   USING_ELEC_RECEIPT,
 }
 
-export enum HairStyles {
-  SHORT_CUT = 'short-cut',
-  LONG = 'long',
-}
-export enum HairColors {
-  BLACK = 'black',
-}
-export enum TopClothes {
-  SHIRTS = 'shirts',
-}
-export enum BottomClothes {
-  PANTS = 'pants',
-}
-export enum ShoesTypes {
-  SNEAKERS = 'sneakers',
-}
-
 export interface InitialState {
   interestingIssueType: InterestingIssueType | null;
-  hairStyle: HairStyles;
-  hairColor: HairColors;
-  topClothes: TopClothes;
-  bottomClothes: BottomClothes;
-  shoesType: ShoesTypes;
+  hairStyle: number;
+  hairColor: ColorTypes;
+  topClothes: number;
+  // topColor: ColorTypes;
+  bottomClothes: number;
+  bottomColor: ColorTypes;
+  shoesType: number;
+  shoesColor: ColorTypes;
 }
 
 const initialState: InitialState = {
   interestingIssueType: null,
-  hairStyle: HairStyles.SHORT_CUT,
-  hairColor: HairColors.BLACK,
-  topClothes: TopClothes.SHIRTS,
-  bottomClothes: BottomClothes.PANTS,
-  shoesType: ShoesTypes.SNEAKERS,
+  hairStyle: 0,
+  hairColor: ColorTypes.MINT,
+  topClothes: 0,
+  // topColor: ColorTypes.
+  bottomClothes: 0,
+  bottomColor: ColorTypes.BLUE,
+  shoesType: 0,
+  shoesColor: ColorTypes.PURPLE,
 };
 
 export default initialState;

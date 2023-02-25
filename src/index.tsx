@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalContextProvider } from './lib/GlobalContext';
 
+import * as _ from 'lodash';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -20,3 +22,13 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// function component() {
+//   const element = document.createElement('div');
+
+//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+//   return element;
+// }
+
+// document.body.appendChild(component())

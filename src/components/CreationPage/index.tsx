@@ -1,20 +1,35 @@
-import React from 'react';
-import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalContext';
-import { Icon, IconTypes } from '../Icon';
+import React, { useState } from 'react';
 import './index.css';
 
-import CreatingBoxSvg from './creating-box.svg';
+import { CHANGE_COLOR, SELECT_ITEM } from '../../lib/dux/actionTypes';
+import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalContext';
+import { ColorIcon, ColorTypes } from '../Colors';
+import { Icon, IconTypes } from '../Icon';
+import { ImageRenderer } from '../ImageRenderer';
+import { StylesBox } from './stylesBox';
 
 interface CreationPageProps {
   className?: string;
 }
 
+export const CreatingBoxStatus = {
+  HAIR: 'hair',
+  SHIRTS: 'shirts',
+  PANTS: 'pants',
+  SHOES: 'shoes',
+} as const;
+export type CreatingBoxStatus = typeof CreatingBoxStatus[keyof typeof CreatingBoxStatus];
+
 export const CreationPage = ({
   className,
 }: CreationPageProps): React.ReactElement => {
   const {
-    setPage
+    setPage,
+    treeDispatcher,
   } = useGlobalContext() as GlobalContext;
+  const [boxState, setBoxState] = useState<CreatingBoxStatus>(CreatingBoxStatus.HAIR);
+  const [itemColor, setItemColor] = useState<ColorTypes>(ColorTypes.MINT);
+
   return (
     <div className={`${className} tree-creation-page`}>
       <div className='tree-creation-page__header'>
@@ -34,10 +49,63 @@ export const CreationPage = ({
         className='tree-creation-page__step-description'
         type={IconTypes.STEP_2}
       />
-      <img
+      <div
         className='tree-creation-page__creating-box'
-        src={CreatingBoxSvg}
-      />
+      >
+        <ImageRenderer />
+        <div className='creating-control-box'>
+          <div className='creating-control-box__menu'>
+            <Icon
+              className='creating-control-box__menu__item'
+              type={boxState === CreatingBoxStatus.HAIR ? IconTypes.HAIR_BLUE : IconTypes.HAIR}
+              onClick={() => { setBoxState(CreatingBoxStatus.HAIR) }}
+            />
+            <Icon
+              className='creating-control-box__menu__item'
+              type={boxState === CreatingBoxStatus.SHIRTS ? IconTypes.SHIRTS_BLUE : IconTypes.SHIRTS}
+              onClick={() => { setBoxState(CreatingBoxStatus.SHIRTS) }}
+            />
+            <Icon
+              className='creating-control-box__menu__item'
+              type={boxState === CreatingBoxStatus.PANTS ? IconTypes.PANTS_BLUE : IconTypes.PANTS}
+              onClick={() => { setBoxState(CreatingBoxStatus.PANTS) }}
+            />
+            <Icon
+              className='creating-control-box__menu__item'
+              type={boxState === CreatingBoxStatus.SHOES ? IconTypes.SHOES_BLUE : IconTypes.SHOES}
+              onClick={() => { setBoxState(CreatingBoxStatus.SHOES) }}
+            />
+          </div>
+          <div className='creating-control-box__colors'>
+            {Object.values(ColorTypes).map((color) => (
+              <ColorIcon
+                key={color}
+                className='creating-control-box__colors__item'
+                color={color}
+                onClick={() => {
+                  setItemColor(color);
+                  treeDispatcher({
+                    type: CHANGE_COLOR,
+                    payload: { color, type: boxState },
+                  });
+                }}
+              />
+            ))}
+          </div>
+          <div className='creating-control-box__styles'>
+            <StylesBox
+              type={boxState}
+              color={itemColor}
+              onClick={(props) => {
+                treeDispatcher({
+                  type: SELECT_ITEM,
+                  payload: props,
+                })
+              }}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

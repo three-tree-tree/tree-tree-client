@@ -46,11 +46,10 @@ export const LandingPage = ({
         <div>
           <div className='tree-landing-page__people-count'> {peopleCount}명 </div>
         </div>
+        <div className='tree-landing-page__main-content'>
+          <MainContent />
+        </div>
       </div>
-      <img
-        className='tree-landing-page__main-content'
-        src={MainContent}
-      />
       <Button
         className='tree-landing-page__start-button'
         onClick={() => {
@@ -58,17 +57,14 @@ export const LandingPage = ({
         }}
         type={ButtonTypes.START_JOIN}
       />
-
       <Button
         className='tree-landing-page__feed-button'
         onClick={handleOnClickFeedButton}
         type={ButtonTypes.INSTAGRAM_FEED}
       />
-
-      <img
-        className='tree-landing-page__text-content'
-        src={TextContent}
-      />
+      <div className='tree-landing-page__text-content'>
+        <TextContent />
+      </div>
     </div>
   );
 };
