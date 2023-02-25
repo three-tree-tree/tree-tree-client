@@ -38,21 +38,15 @@ export const LandingPage = ({
 
   return (
     <div className={`${className} tree-landing-page`}>
-
-      {
-        peopleCount &&
-        (
-          <>
-            <Icon
-              className='tree-landing-page__title-logo'
-              type={IconTypes.CURRENT_COUNT}
-            />
-            <div>
-              <div className='tree-landing-page__people-count'> {peopleCount} 명 </div>
-            </div>
-          </>
-        )
-      }
+      <div style={{ visibility: peopleCount ? "visible" : "hidden" }}>
+        <Icon
+          className='tree-landing-page__title-logo'
+          type={IconTypes.CURRENT_COUNT}
+        />
+        <div>
+          <div className='tree-landing-page__people-count'> {peopleCount} 명 </div>
+        </div>
+      </div>
       <img
         className='tree-landing-page__main-content'
         src={MainContent}
