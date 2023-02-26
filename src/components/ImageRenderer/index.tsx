@@ -29,6 +29,7 @@ export const ImageRenderer = ({
     hairStyle,
     hairColor,
     topClothes,
+    topColor,
     bottomClothes,
     bottomColor,
     shoesType,
@@ -73,7 +74,7 @@ export const ImageRenderer = ({
       </div>
       <ImageSource type="shoes" number={shoesType} color={shoesColor} />
       <ImageSource type="pants" number={bottomClothes} color={bottomColor} />
-      <ImageSource type="shirts" number={topClothes} interest={interestingIssueType as InterestingIssueType} />
+      <ImageSource type="shirts" number={topClothes} color={topColor} interest={interestingIssueType as InterestingIssueType} />
       <ImageSource type="hair" number={hairStyle} color={hairColor} />
     </div>
   )

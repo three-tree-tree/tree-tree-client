@@ -14,7 +14,7 @@ export interface InitialState {
   hairStyle: number;
   hairColor: ColorTypes;
   topClothes: number;
-  // topColor: ColorTypes;
+  topColor: ColorTypes;
   bottomClothes: number;
   bottomColor: ColorTypes;
   shoesType: number;
@@ -27,7 +27,7 @@ const initialState: InitialState = {
   hairStyle: 0,
   hairColor: ColorTypes.MINT,
   topClothes: 0,
-  // topColor: ColorTypes.
+  topColor: ColorTypes.YELLOW,
   bottomClothes: 0,
   bottomColor: ColorTypes.BLUE,
   shoesType: 0,
