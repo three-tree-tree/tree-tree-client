@@ -1,7 +1,7 @@
 .tree-landing-page {
   position: relative;
-  /* width: 100%; */
-  max-width: 600px;
+  width: 100%;
+  /* max-width: 600px; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,10 @@
 
 .tree-landing-page__title-logo {
   margin-bottom: 10px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tree-landing-page__start-button {
@@ -20,17 +24,23 @@
 
 .tree-landing-page__text-content {
   margin-top: 34px;
-  width: 85%;
+  width: 70%;
 }
 
 .tree-landing-page__people-count {
-  font-size: 3.5rem;
+  font-size: 10rem;
   color: white;
   -webkit-text-fill-color: rgba(100, 100, 100, 0); /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
   font-family: 'Sandoll GyeokdongGL2';
   font-weight: 400;
+}
+
+.tree-landing-page__people-div {
+  width:100%;
+  margin-top: 3%;
+  height:55%;
 }
 
 .tree-landing-page__feed-button {
@@ -41,6 +51,12 @@
 
 .tree-landing-page__main-content {
   max-height: 40%;
+  width: 80%;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17%;
 }
 
 /*
