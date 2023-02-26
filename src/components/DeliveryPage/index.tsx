@@ -69,7 +69,7 @@ export const DeliveryPage = ({
         onClick={handleOnClickFeedButton}
         type={ButtonTypes.INSTAGRAM_FEED}
       />
-      {/* { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />} */}
+      { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />}
     </div>
   );
 };
