@@ -61,12 +61,20 @@ export const DeliveryPage = ({
       <div className='tree-delivery-page__image-guide'>
         <ImageGuide />
       </div>
-      <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp} />
-      <Button
-        className='tree-delivery-page__feed-button'
-        onClick={handleOnClickFeedButton}
-        type={ButtonTypes.INSTAGRAM_FEED}
-      />
+      <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
+      <div className='tree-delivery-page__button-wrapper'>
+        <Button
+          className='tree-delivery-page__retry'
+          onClick={() => {}}
+          type={ButtonTypes.RETRY}
+        />
+
+        <Button
+          className='tree-delivery-page__copy'
+          onClick={() => {}}
+          type={ButtonTypes.COPY_LINK}
+          />
+      </div>
       {/* { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />} */}
     </div>
   );
