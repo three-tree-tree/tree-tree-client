@@ -35,7 +35,7 @@ export const DeliveryPage = ({
 
   return (
     <div className={`${className} tree-delivery-page`}>
-      <div className='tree-delivery-page__header'>
+      <div className='tree-selection-page__header'>
         {
           imageSource && (
             <img src={imageSource} />
@@ -45,7 +45,7 @@ export const DeliveryPage = ({
           className='tree-delivery-page__header__back-button'
           type={IconTypes.LEFT_ARROW}
           onClick={() => {
-            setPage(PageStatus.CREATING)
+            setPage(PageStatus.LANDING)
           }}
         />
         <Icon
@@ -60,7 +60,7 @@ export const DeliveryPage = ({
         <ImageBox />
       </div>
       <div className='tree-delivery-page__image-guide'>
-          <ImageGuide />
+        <ImageGuide />
       </div>
       <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
       <Button
@@ -68,7 +68,7 @@ export const DeliveryPage = ({
         onClick={handleOnClickFeedButton}
         type={ButtonTypes.INSTAGRAM_FEED}
       />
-      { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />}
+      {/* { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />} */}
     </div>
   );
 };
