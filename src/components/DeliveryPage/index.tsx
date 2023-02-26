@@ -8,6 +8,7 @@ import { Button, ButtonTypes } from '../Button';
 import { PageStatus, useGlobalContext, GlobalContext } from '../../lib/GlobalContext';
 
 import { CompleteButton } from './CompleteButton';
+import { CompletePopup } from './CompletePopup';
 import MainContent from './step-3.svg';
 import ImageGuide from './image-guide.svg'
 import TagTexts from './tag-texts.svg';
