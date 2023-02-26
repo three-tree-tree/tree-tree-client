@@ -15,12 +15,12 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 2vh;
 }
 
 .tree-delivery-page__header__back-button {
   position: absolute;
-  left: 24px;
+  left: 50px;
 }
 
 .tree-delivery-page__main-content {

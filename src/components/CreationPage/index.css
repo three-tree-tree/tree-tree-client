@@ -15,15 +15,17 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 2vh;
 }
+
 .tree-creation-page__header__back-button {
   position: absolute;
-  left: 24px;
+  left: 50px;
 }
+
 .tree-creation-page__step-description {
   width: 320px;
-  margin-top: 24px;
+  margin-top: 12vh;
   margin-bottom: 12px;
 }
 

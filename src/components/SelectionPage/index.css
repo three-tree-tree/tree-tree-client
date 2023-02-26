@@ -17,15 +17,15 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5vh;
+  margin-top: 2vh;
 }
 .tree-selection-page__header__back-button {
   position: absolute;
-  left: 24px;
+  left: 50px;
 }
 .tree-selection-page__step-description {
   width: 800px;
-  margin-top: 20vh;
+  margin-top: 12vh;
 }
 
 .tree-selection-page__selections {
