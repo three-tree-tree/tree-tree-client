@@ -27,23 +27,27 @@
 .tree-delivery-page__main-content {
   position: relative;
   width: 60%;
+  height: 10%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5%;
 }
 
 .tree-delivery-page__image-box {
   position: relative;
   width: 80%;
+  height: 40%;
+  margin-top: 15%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
 }
 
 .tree-delivery-page__image-guide {
   position: relative;
   width: 50%;
+  height: 5%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -53,19 +57,19 @@
 .tree-delivery-page__instagram-button {
   position: relative;
   width: 100%;
+  height: 7%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 }
 
 .tree-delivery-page__button-wrapper {
   position: relative;
   width: 100%;
+  height: 7%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
 }
 
 .tree-delivery-page__feed-button {
