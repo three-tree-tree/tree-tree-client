@@ -19,8 +19,8 @@ export const StylesBox = ({
   onClick,
 }: StylesBoxProps): React.ReactElement => {
   return (
-    <div>
-      <div>
+    <div className='tree-styles-box'>
+      <div className='tree-styles-box__row'>
         {[0, 1, 2, 3].map((number) => {
           return (
             <MenuIcon
@@ -32,7 +32,7 @@ export const StylesBox = ({
           )
         })}
       </div>
-      <div>
+      <div className='tree-styles-box__row'>
       {[4, 5, 6, 7].map((number) => {
           return (
             <MenuIcon
