@@ -1,8 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 // import mergeImages from 'merge-images';
 import './index.css';
+import html2canvas from 'html2canvas';
 
-import { CHANGE_COLOR, SELECT_ITEM } from '../../lib/dux/actionTypes';
+import { CHANGE_COLOR, SAVE_IMAGE, SELECT_ITEM } from '../../lib/dux/actionTypes';
 import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalContext';
 import { ColorIcon, ColorTypes } from '../Colors';
 import { Icon, IconTypes } from '../Icon';
@@ -34,8 +35,6 @@ export const CreationPage = ({
   const [boxState, setBoxState] = useState<CreatingBoxStatus>(CreatingBoxStatus.HAIR);
   const [itemColor, setItemColor] = useState<ColorTypes>(ColorTypes.MINT);
 
-  const canvasRef = useRef(null);
-
   return (
     <div className={`${className} tree-creation-page`}>
       <div className='tree-creation-page__header'>
@@ -50,38 +49,20 @@ export const CreationPage = ({
           className='tree-creation-page__header__title-logo'
           type={IconTypes.LOGO}
         />
-        {/* <Trigger> */}
         <Icon
-          type={IconTypes.LEFT_ARROW}
-        // onClick={() => {
-        //   // disable-ts
-        //   var list = document.querySelectorAll("[class *= tree-image-resource]")
-        //   const arr: Array<string> = [];
-        //   list.forEach((dom: Element) => {
-        //     const s = new XMLSerializer().serializeToString(dom)
-        //     var l ='data:image/svg;base64,' + window.btoa(s);
-        //     fetch(l);
-        //     const img = new Image()
-        //     img.onload = () => {
-        //       console.log(img)
-        //     }
-        //     img.src = l;
-        //     // var u = URL.createObjectURL(l);
-        //     arr.push(l);
-        //     // return u;
-        //   })
-        //   // const ca = (canvasRef?.current) as HTMLCanvasElement | null;
-        //   // const h = Hair;
-        //   // img.src = `data:image/svg+xml;base64,${}`
-        //   // ca?.getContext?.('2d').drawImage(URL.createObjectURL(new Blob([Hair], {type: 'image/svg+xml'})))
-        //   mergeImages(arr).then((mergedImg) => {
-        //     const blob = new Blob([mergedImg], { type: 'image/svg+xml' })
-        //     console.log(blob);
-        //     debugger
-        //   })
-        // }}
+          className='tree-creation-page__header__confirm-button'
+          type={IconTypes.CHECK_BUTTON}
+          onClick={() => {
+            html2canvas(document.getElementById('image-capture-area') as HTMLElement, {})
+              .then(canvas => {
+                treeDispatcher({
+                  type: SAVE_IMAGE,
+                  payload: canvas.toDataURL('image/png'),
+                })
+                setPage(PageStatus.DELIVERYING)
+              })
+          }}
         />
-        {/* </Trigger> */}
       </div>
       <Icon
         className='tree-creation-page__step-description'
@@ -90,9 +71,9 @@ export const CreationPage = ({
       <div
         className='tree-creation-page__creating-box'
       >
-        {/* <Wrapper> */}
-        <ImageRenderer />
-        {/* </Wrapper> */}
+        <div id='image-capture-area'>
+          <ImageRenderer />
+        </div>
         <div className='creating-control-box'>
           <div className='creating-control-box__menu'>
             <Icon

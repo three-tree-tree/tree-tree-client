@@ -20,10 +20,8 @@ interface DeliveryPageProps {
 export const DeliveryPage = ({
   className,
 }: DeliveryPageProps): React.ReactElement => {
-  const tempImageBlob = new Blob(["Hello, world!"], {
-    type: "text/plain;charset=utf-8"
-  });
-  const { setPage } = useGlobalContext() as GlobalContext;
+  const { setPage, treeStore } = useGlobalContext() as GlobalContext;
+  const { imageSource } = treeStore;
 
   const [ openPopUp, setOpenPopUp ] = useState(false);
 
@@ -38,6 +36,11 @@ export const DeliveryPage = ({
   return (
     <div className={`${className} tree-delivery-page`}>
       <div className='tree-delivery-page__header'>
+        {
+          imageSource && (
+            <img src={imageSource} />
+          )
+        }
         <Icon
           className='tree-delivery-page__header__back-button'
           type={IconTypes.LEFT_ARROW}
@@ -56,11 +59,8 @@ export const DeliveryPage = ({
       <div className='tree-delivery-page__image-box'>
         <ImageBox />
       </div>
-      <div>
-        <img
-          className='tree-delivery-page__image-guide'
-          src={ImageGuide}
-        />
+      <div className='tree-delivery-page__image-guide'>
+          <ImageGuide />
       </div>
       <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
       <Button

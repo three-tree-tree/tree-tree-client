@@ -19,6 +19,12 @@ export default function reducer(
         interestingIssueType: action.payload,
       };
     }
+    case actionTypes.SAVE_IMAGE: {
+      return {
+        ...state,
+        imageSource: action.payload,
+      }
+    }
     case actionTypes.SELECT_ITEM: {
       const {
         type,
