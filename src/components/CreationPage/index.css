@@ -37,14 +37,19 @@
   flex-direction: column;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
   background-color: white;
   width: calc(100% - 14vw);
   height: calc(100% - 100px);
   border-radius: 40px;
   margin-top: 1vh;
   margin-bottom: 5vh;
+  padding-top: 3vh;
+}
+
+.image-capture-area {
+  margin-top: 3vh;
+  width: var(--image-size);
+  height: var(--image-size);
 }
 
 .tree-creation-page__creating-box__creature-zone {
@@ -84,7 +89,8 @@
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 14px;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
 }
 .creating-control-box__colors__item {
   width: 4vw;
@@ -115,4 +121,22 @@
 }
 .color-purple {
   background-color: #E343FF;
+}
+
+.creating-control-box__styles {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+.tree-styles-box {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+.tree-styles-box__row {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 2vh;
 }

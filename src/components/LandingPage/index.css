@@ -50,31 +50,11 @@
 }
 
 .tree-landing-page__main-content {
-  max-height: 40%;
   width: 80%;
+  height: fit-content;
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 17%;
+  margin-top: 22%;
 }
-
-/*
-.tree-landing-page__title-logo {
-  margin-top: 6vh;
-  margin-bottom: 14vh;
-}
-
-.tree-landing-page__start-button {
-  margin-top: 3vh;
-}
-
-.tree-landing-page__main-content {
-  width: 800px;
-}
-
-.tree-landing-page__text-content {
-  margin-top: 4vh;
-  width: 800px;
- }
- */

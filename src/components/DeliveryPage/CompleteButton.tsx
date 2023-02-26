@@ -20,18 +20,17 @@ export const CompleteButton = ({
 }: CompleteButtonProps): React.ReactElement => {
     const handleOnCopy = () => {
       popupFun(true);
+      // visit count ++ 
+      postJoin();
       setTimeout(() => {
-      popupFun(false);
-        // visit count ++ 
-        postJoin();
+        popupFun(false);
         // instagram app link로 이동
         window.location.href = "https://www.instagram.com/";
       }, 3000);
     }
 
-    const postJoin = () => {
-        // fire and forget
-        axios.post(SERVER_HOST + "/people/join");
+    const postJoin = async () => {
+        await axios.put(SERVER_HOST + "/people/join");
     }
     
    return (

@@ -14,6 +14,8 @@ import UseElecReceipt from './use-elec-receipt.svg';
 import UseElecReceiptDisabled from './use-elec-receipt-disabled.svg';
 import FeedButton from './feed-button.svg';
 import InstagramButton from './instagram-button.svg';
+import CopyButton from './copy-img.svg';
+import RetryButton from './retry-img.svg';
 
 export interface ButtonProps {
   className?: string;
@@ -31,6 +33,8 @@ export enum ButtonTypes {
   USE_ELEC_RECEIPT,
   INSTAGRAM_FEED,
   INSTAGRAM_SHARE,
+  RETRY,
+  COPY_LINK,
 }
 
 const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.ReactElement => {
@@ -89,6 +93,20 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
       return (
         <div className="tree-button-source">
           <InstagramButton />
+        </div>
+      )
+    }
+    case ButtonTypes.COPY_LINK: {
+      return (
+        <div className="tree-button-source">
+          <CopyButton />
+        </div>
+      )
+    }
+    case ButtonTypes.RETRY: {
+      return (
+        <div className="tree-button-source">
+          <RetryButton />
         </div>
       )
     }
