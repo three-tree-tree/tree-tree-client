@@ -80,18 +80,16 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
     }
     case ButtonTypes.INSTAGRAM_FEED: {
       return (
-        <img
-          className="tree-button-source"
-          src={FeedButton}
-          />
+        <div className="tree-button-source">
+          <FeedButton />
+        </div>
       )
     }
     case ButtonTypes.INSTAGRAM_SHARE: {
       return (
-        <img
-          className="tree-button-source"
-          src={InstagramButton}
-          />
+        <div className="tree-button-source">
+          <InstagramButton />
+        </div>
       )
     }
     default:
