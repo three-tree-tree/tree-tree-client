@@ -28,7 +28,7 @@ export const DeliveryPage = ({
   const [ openPopUp, setOpenPopUp ] = useState(false);
 
   const handleOnClickFeedButton = () => {
-    window.location.replace(INSTAGRAM_FEED_URL);
+    window.location.href = INSTAGRAM_FEED_URL;
   }
 
   const handlePopUp = (open: boolean) => {

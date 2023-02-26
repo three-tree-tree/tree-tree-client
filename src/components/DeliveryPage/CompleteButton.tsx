@@ -25,7 +25,7 @@ export const CompleteButton = ({
         // visit count ++ 
         postJoin();
         // instagram app link로 이동
-        window.location.replace("https://www.instagram.com/"); 
+        window.location.href = "https://www.instagram.com/";
       }, 3000);
     }
 

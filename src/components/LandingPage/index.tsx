@@ -33,7 +33,7 @@ export const LandingPage = ({
   })
 
   const handleOnClickFeedButton = () => {
-    window.location.replace(INSTAGRAM_FEED_URL);
+    window.location.href = INSTAGRAM_FEED_URL;
   }
 
   return (
