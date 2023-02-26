@@ -33,7 +33,7 @@ export const LandingPage = ({
   })
 
   const handleOnClickFeedButton = () => {
-    window.location.replace(INSTAGRAM_FEED_URL); 
+    window.location.replace(INSTAGRAM_FEED_URL);
   }
 
   return (
@@ -54,6 +54,7 @@ export const LandingPage = ({
         className='tree-landing-page__start-button'
         onClick={() => {
           setPage(PageStatus.SELECTING)
+          console.log('click to Selection')
         }}
         type={ButtonTypes.START_JOIN}
       />

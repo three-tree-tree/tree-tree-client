@@ -9,6 +9,7 @@ import { CompleteButton } from './CompleteButton';
 import { CompletePopup } from './CompletePopup';
 import MainContent from './step-3.svg';
 import ImageBox from './image-box.svg';
+import ImageGuide from './image-guide.svg'
 
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 
@@ -54,6 +55,12 @@ export const DeliveryPage = ({
       </div>
       <div className='tree-delivery-page__image-box'>
         <ImageBox />
+      </div>
+      <div>
+        <img
+          className='tree-delivery-page__image-guide'
+          src={ImageGuide}
+        />
       </div>
       <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
       <Button

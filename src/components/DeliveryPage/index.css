@@ -43,6 +43,18 @@
   margin-top: 20px;
 }
 
+
+.tree-delivery-page__image-guide {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .tree-delivery-page__instagram-button {
   position: relative;
   width: 100%;
