@@ -37,8 +37,6 @@
   flex-direction: column;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
   background-color: white;
   width: calc(100% - 14vw);
   height: calc(100% - 100px);

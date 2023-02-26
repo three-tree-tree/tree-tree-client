@@ -6,10 +6,9 @@ import { Button, ButtonTypes } from '../Button';
 import { PageStatus, useGlobalContext, GlobalContext } from '../../lib/GlobalContext';
 
 import { CompleteButton } from './CompleteButton';
-import { CompletePopup } from './CompletePopup';
 import MainContent from './step-3.svg';
-import ImageBox from './image-box.svg';
 import ImageGuide from './image-guide.svg'
+import TagTexts from './tag-texts.svg';
 
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 
@@ -23,7 +22,7 @@ export const DeliveryPage = ({
   const { setPage, treeStore } = useGlobalContext() as GlobalContext;
   const { imageSource } = treeStore;
 
-  const [ openPopUp, setOpenPopUp ] = useState(false);
+  const [openPopUp, setOpenPopUp] = useState(false);
 
   const handleOnClickFeedButton = () => {
     window.location.href = INSTAGRAM_FEED_URL;
@@ -36,7 +35,6 @@ export const DeliveryPage = ({
   return (
     <div className={`${className} tree-delivery-page`}>
       <div className='tree-selection-page__header'>
-  
         <Icon
           className='tree-delivery-page__header__back-button'
           type={IconTypes.LEFT_ARROW}
@@ -53,17 +51,17 @@ export const DeliveryPage = ({
         <MainContent />
       </div>
       <div className='tree-delivery-page__image-box'>
-        <ImageBox />
-        {
-          imageSource && (
-            <img className='tree-delivery-page__custom-image' src={imageSource} />
-          )
-        }
+        {imageSource && (
+          <img className='tree-delivery-page__custom-image' src={imageSource} />
+        )}
+        <div className='tree-delivery-page__tag-texts'>
+          <TagTexts />
+        </div>
       </div>
       <div className='tree-delivery-page__image-guide'>
         <ImageGuide />
       </div>
-      <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
+      <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp} />
       <Button
         className='tree-delivery-page__feed-button'
         onClick={handleOnClickFeedButton}

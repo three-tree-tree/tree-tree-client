@@ -31,13 +31,18 @@
 
 .tree-delivery-page__image-box {
   position: relative;
-  width: 80%;
-  height: 40%;
-  margin-top: 15%;
   display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  background-color: white;
+  width: calc(100% - 14vw);
+  height: fit-content;
+  border-radius: 40px;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  padding-top: 3vh;
 }
 
 .tree-delivery-page__image-guide {
@@ -92,10 +97,11 @@
 }
 
 .tree-delivery-page__custom-image {
-  width: 70%;
-  max-width: 70%;
-  position: fixed;
-  top: 44%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: var(--image-size);
+  height: var(--image-size);
+}
+.tree-delivery-page__tag-texts {
+  width: var(--image-size);
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
