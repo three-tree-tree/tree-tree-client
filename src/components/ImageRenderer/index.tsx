@@ -44,7 +44,7 @@ export const ImageRenderer = ({
         return <div className={`tree-image-source ${prettyColor(hairColor)}`}><Hair_7 /></div>
       case 7:
         return <div className={`tree-image-source ${prettyColor(hairColor)}`}><Hair_8 /></div>
-      default: return null;
+      default: return '';
     }
   }, [hairStyle, hairColor]);
   const cloak = useMemo(() => {
@@ -63,6 +63,7 @@ export const ImageRenderer = ({
     if (interestingIssueType === InterestingIssueType.SAVING_ENERGY) {
       return <Plug_Cloak />
     }
+    return ''
   }, [interestingIssueType]);
 
   return (

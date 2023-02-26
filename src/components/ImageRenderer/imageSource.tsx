@@ -154,14 +154,14 @@ const imageSources = {
     <Pants_8 />,
   ],
   shoes: [
-    <div className='absolute-wrapper'><Legs /><Shoes_1 />,</div>,
-    <div className='absolute-wrapper'><Legs /><Shoes_2 />,</div>,
-    <div className='absolute-wrapper'><Legs /><Shoes_3 />,</div>,
-    <div className='absolute-wrapper'><Legs /><Shoes_4 />,</div>,
-    <div className='absolute-wrapper'><Legs /><Shoes_5 />,</div>,
-    <div className='absolute-wrapper'><Legs /><Shoes_6 />,</div>,
-    <div className='absolute-wrapper'><Legs /><Shoes_7 />,</div>,
-    <div className='absolute-wrapper'><Legs /><Shoes_8 />,</div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_1 /></div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_2 /></div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_3 /></div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_4 /></div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_5 /></div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_6 /></div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_7 /></div>,
+    <div className='absolute-wrapper'><Legs /><Shoes_8 /></div>,
   ],
 }
 
