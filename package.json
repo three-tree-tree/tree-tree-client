@@ -15,17 +15,15 @@
     "file-saver": "^2.0.5",
     "gh-pages": "^5.0.0",
     "html2canvas": "^1.4.1",
-    "merge-images": "^2.0.0",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "wolfy87-eventemitter": "^5.2.9"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "webpack-dev-server",
+    "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "pre-deploy": "npm run build; npm run start",

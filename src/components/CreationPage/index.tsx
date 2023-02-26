@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import mergeImages from 'merge-images';
 import './index.css';
 import html2canvas from 'html2canvas';
 
@@ -9,9 +8,6 @@ import { ColorIcon, ColorTypes } from '../Colors';
 import { Icon, IconTypes } from '../Icon';
 import { ImageRenderer } from '../ImageRenderer';
 import { StylesBox } from './stylesBox';
-
-// import Hair from '../ImageRenderer/hair/hair_00_down.svg';
-// import { Trigger, Wrapper } from '../../lib/utils.jsx';
 
 interface CreationPageProps {
   className?: string;
@@ -68,9 +64,7 @@ export const CreationPage = ({
         className='tree-creation-page__step-description'
         type={IconTypes.STEP_2}
       />
-      <div
-        className='tree-creation-page__creating-box'
-      >
+      <div className='tree-creation-page__creating-box'>
         <div id='image-capture-area'>
           <ImageRenderer />
         </div>
