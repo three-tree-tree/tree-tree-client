@@ -11,6 +11,11 @@ import Cup_Cloak from './shirts/cup/cup_cape.svg';
 import Paper_Cloak from './shirts/paper/paper_cape.svg';
 import Plug_Cloak from './shirts/plug/plug_cape.svg';
 
+import Hair_6 from './hair/hair_06_down.svg';
+import Hair_7 from './hair/hair_07_down.svg';
+import Hair_8 from './hair/hair_08_down.svg';
+import { prettyColor } from '../MenuIcon';
+
 export interface ImageRendererProps {
 
 }
@@ -30,6 +35,17 @@ export const ImageRenderer = ({
     shoesColor
   } = treeStore;
 
+  const longHair = useMemo(() => {
+    switch (hairStyle) {
+      case 4:
+        return <div className={`tree-image-source ${prettyColor(hairColor)}`}><Hair_6 /></div>
+      case 6:
+        return <div className={`tree-image-source ${prettyColor(hairColor)}`}><Hair_7 /></div>
+      case 7:
+        return <div className={`tree-image-source ${prettyColor(hairColor)}`}><Hair_8 /></div>
+      default: return null;
+    }
+  }, [hairStyle, hairColor]);
   const cloak = useMemo(() => {
     if (interestingIssueType === InterestingIssueType.USING_ELEC_RECEIPT) {
       return <App_Cloak />
@@ -52,6 +68,7 @@ export const ImageRenderer = ({
     <div className='tree-image-renderer'>
       <div className='tree-iamge-source absolute-wrapper'>
         <BackgroundImage />
+        {longHair}
         {cloak}
       </div>
       <ImageSource type="shoes" number={shoesType} color={shoesColor} />

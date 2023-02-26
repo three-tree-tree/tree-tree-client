@@ -4,21 +4,19 @@ import { CreatingBoxStatus } from '../CreationPage';
 import { prettyColor } from '../MenuIcon';
 import { InterestingIssueType } from '../../lib/dux/initialState';
 
-import Hair_1_D from './hair/hair_00_down.svg';
-import Hair_2_D from './hair/hair_01_down.svg';
-import Hair_3_D from './hair/hair_02_down.svg';
-import Hair_4_D from './hair/hair_03_down.svg';
-import Hair_5_D from './hair/hair_04_down.svg';
+import Hair_1_D from './hair/hair_02_down.svg';
+import Hair_2_D from './hair/hair_03_down.svg';
+import Hair_3_D from './hair/hair_04_down.svg';
+import Hair_4_D from './hair/hair_01_down.svg';
 import Hair_6_D from './hair/hair_05_down.svg';
-import Hair_7_D from './hair/hair_06_down.svg';
-import Hair_8_D from './hair/hair_07_down.svg';
-import Hair_1_U from './hair/hair_00_up.svg';
-import Hair_2_U from './hair/hair_01_up.svg';
-import Hair_3_U from './hair/hair_02_up.svg';
-import Hair_4_U from './hair/hair_03_up.svg';
-import Hair_5_U from './hair/hair_04_up.svg';
+
+import Hair_1_U from './hair/hair_02_up.svg';
+import Hair_2_U from './hair/hair_03_up.svg';
+import Hair_3_U from './hair/hair_04_up.svg';
+import Hair_4_U from './hair/hair_01_up.svg';
+import Hair_5_U from './hair/hair_06_up.svg';
 import Hair_6_U from './hair/hair_05_up.svg';
-import Hair_7_U from './hair/hair_06_up.svg';
+import Hair_7_U from './hair/hair_07_up.svg';
 import Hair_8_U from './hair/hair_07_up.svg';
 
 import App_Shirts_1 from './shirts/app/app_top_01.svg';
@@ -135,38 +133,14 @@ const shirtsPlug = [
 
 const imageSources = {
   hair: [
-    <div className='absolute-wrapper'>
-      <Hair_1_D />
-      <Hair_1_U />
-    </div>,
-    <div className='absolute-wrapper'>
-      <Hair_2_D />
-      <Hair_2_U />
-    </div>,
-    <div className='absolute-wrapper'>
-      <Hair_3_D />
-      <Hair_3_U />
-    </div>,
-    <div className='absolute-wrapper'>
-      <Hair_4_D />
-      <Hair_4_U />
-    </div>,
-    <div className='absolute-wrapper'>
-      <Hair_5_D />
-      <Hair_5_U />
-    </div>,
-    <div className='absolute-wrapper'>
-      <Hair_6_D />
-      <Hair_6_U />
-    </div>,
-    <div className='absolute-wrapper'>
-      <Hair_7_D />
-      <Hair_7_U />
-    </div>,
-    <div className='absolute-wrapper'>
-      <Hair_8_D />
-      <Hair_8_U />
-    </div>,
+    <div className='absolute-wrapper'><Hair_1_D /><Hair_1_U /></div>,
+    <div className='absolute-wrapper'><Hair_2_D /><Hair_2_U /></div>,
+    <div className='absolute-wrapper'><Hair_3_D /><Hair_3_U /></div>,
+    <div className='absolute-wrapper'><Hair_4_D /><Hair_4_U /></div>,
+    <div className='absolute-wrapper'><Hair_5_U /></div>,
+    <div className='absolute-wrapper'><Hair_6_D /><Hair_6_U /></div>,
+    <div className='absolute-wrapper'><Hair_7_U /></div>,
+    <div className='absolute-wrapper'><Hair_8_U /></div>,
   ],
   shirts: shirtsApp,
   pants: [

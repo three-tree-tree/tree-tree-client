@@ -30,6 +30,7 @@
 
 .tree-selection-page__selections {
   margin-top: 8vh;
+  width: 100%;
   position: relative;
   display: inline-flex;
   flex-direction: column;

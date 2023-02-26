@@ -9,8 +9,6 @@ import { CompleteButton } from './CompleteButton';
 import { CompletePopup } from './CompletePopup';
 import MainContent from './step-3.svg';
 import ImageBox from './image-box.svg';
-import { Icon, IconTypes } from '../Icon';
-import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalContext';
 
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 
@@ -29,7 +27,7 @@ export const DeliveryPage = ({
   const [ openPopUp, setOpenPopUp ] = useState(false);
 
   const handleOnClickFeedButton = () => {
-    window.location.replace(INSTAGRAM_FEED_URL); 
+    window.location.replace(INSTAGRAM_FEED_URL);
   }
 
   const handlePopUp = (open: boolean) => {
@@ -51,15 +49,11 @@ export const DeliveryPage = ({
           type={IconTypes.LOGO}
         />
       </div>
-      <img
-        className='tree-delivery-page__main-content'
-        src={MainContent}
-      />
-      <div>
-        <img
-          className='tree-delivery-page__image-box'
-          src={ImageBox}
-        />
+      <div className='tree-delivery-page__main-content'>
+        <MainContent />
+      </div>
+      <div className='tree-delivery-page__image-box'>
+        <ImageBox />
       </div>
       <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
       <Button
