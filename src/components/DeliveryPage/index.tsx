@@ -36,11 +36,7 @@ export const DeliveryPage = ({
   return (
     <div className={`${className} tree-delivery-page`}>
       <div className='tree-selection-page__header'>
-        {
-          imageSource && (
-            <img src={imageSource} />
-          )
-        }
+  
         <Icon
           className='tree-delivery-page__header__back-button'
           type={IconTypes.LEFT_ARROW}
@@ -58,6 +54,11 @@ export const DeliveryPage = ({
       </div>
       <div className='tree-delivery-page__image-box'>
         <ImageBox />
+        {
+          imageSource && (
+            <img className='tree-delivery-page__custom-image' src={imageSource} />
+          )
+        }
       </div>
       <div className='tree-delivery-page__image-guide'>
         <ImageGuide />
