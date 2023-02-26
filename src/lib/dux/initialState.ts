@@ -10,6 +10,7 @@ export enum InterestingIssueType {
 
 export interface InitialState {
   interestingIssueType: InterestingIssueType | null;
+  imageSource?: string;
   hairStyle: number;
   hairColor: ColorTypes;
   topClothes: number;
@@ -22,6 +23,7 @@ export interface InitialState {
 
 const initialState: InitialState = {
   interestingIssueType: null,
+  imageSource: '',
   hairStyle: 0,
   hairColor: ColorTypes.MINT,
   topClothes: 0,

@@ -15,6 +15,7 @@ import PantsIcon from './pants.svg';
 import PnatsBlueIcon from './pants-blue.svg';
 import ShoesIcon from './shoes.svg';
 import ShoesBlueIcon from './shoes-blue.svg';
+import CheckButton from './check-button.svg';
 
 export const IconTypes = {
   CURRENT_COUNT: 'CURRENT_COUNT',
@@ -30,6 +31,7 @@ export const IconTypes = {
   PANTS_BLUE: 'PANTS_BLUE',
   SHOES: 'SHOES',
   SHOES_BLUE: 'SHOES_BLUE',
+  CHECK_BUTTON: 'CHECK_BUTTON',
 } as const;
 export type IconTypes = typeof IconTypes[keyof typeof IconTypes];
 
@@ -54,6 +56,9 @@ export const Icon = ({
       }
       case IconTypes.LEFT_ARROW: {
         return <div className='tree-icon left-arrow' ><LeftArrow /></div>
+      }
+      case IconTypes.CHECK_BUTTON: {
+        return <div className='tree-icon check-button'><CheckButton /></div>
       }
       case IconTypes.STEP_1: {
         return <div className='tree-icon'><Step1 /></div>

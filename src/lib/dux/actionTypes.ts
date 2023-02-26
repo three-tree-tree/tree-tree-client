@@ -1,3 +1,4 @@
 export const SELECT_INTERESTS = 'SELECT_INTERESTS';
 export const SELECT_ITEM = 'SELECT_ITEM';
 export const CHANGE_COLOR = 'CHANGE_COLOR';
+export const SAVE_IMAGE = 'SAVE_IMAGE';
