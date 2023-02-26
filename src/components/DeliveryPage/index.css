@@ -125,3 +125,12 @@
   align-items: center;
   flex-direction: row;
 }
+
+
+.tree-delivery-page__share-popup {
+  width: 80%;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

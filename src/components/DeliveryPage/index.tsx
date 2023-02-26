@@ -12,6 +12,7 @@ import { CompletePopup } from './CompletePopup';
 import MainContent from './step-3.svg';
 import ImageGuide from './image-guide.svg'
 import TagTexts from './tag-texts.svg';
+import { SharePopup } from './SharePopup';
 
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 const SERVICE_HOST = "https://three-tree-tree.github.io/"
@@ -27,13 +28,17 @@ export const DeliveryPage = ({
   const { imageSource } = treeStore;
 
   const [openPopUp, setOpenPopUp] = useState(false);
-
-  const handleOnClickFeedButton = () => {
-    window.location.href = INSTAGRAM_FEED_URL;
-  }
+  const [openSharePopUp, setOpenSharePopUp] = useState(false);
 
   const handlePopUp = (open: boolean) => {
     setOpenPopUp(open);
+  }
+
+  const handleSharePopUp = () => {
+    setOpenSharePopUp(true);
+    setTimeout(() => {
+      setOpenSharePopUp(false);
+    }, 1500);
   }
 
   return (
@@ -72,7 +77,7 @@ export const DeliveryPage = ({
           onClick={() => {setPage(PageStatus.LANDING)}}
           type={ButtonTypes.RETRY}
         />
-      <CopyToClipboard text={SERVICE_HOST} onCopy={() => {}}>
+      <CopyToClipboard text={SERVICE_HOST} onCopy={handleSharePopUp}>
         <Button
           className='tree-delivery-page__copy'
           onClick={() => {}}
@@ -81,6 +86,7 @@ export const DeliveryPage = ({
         </CopyToClipboard>
       </div>
       { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />}
+      { openSharePopUp && <SharePopup />}
     </div>
   );
 };
