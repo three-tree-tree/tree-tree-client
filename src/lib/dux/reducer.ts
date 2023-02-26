@@ -40,6 +40,7 @@ export default function reducer(
       }
       if (type === CreatingBoxStatus.SHIRTS) {
         newSelection.topClothes = number;
+        newSelection.topColor = color;
       }
       if (type === CreatingBoxStatus.PANTS) {
         newSelection.bottomClothes = number;
@@ -60,6 +61,9 @@ export default function reducer(
       const newSelection: Record<string, any> = {};
       if (type === CreatingBoxStatus.HAIR) {
         newSelection.hairColor = color;
+      }
+      if (type === CreatingBoxStatus.SHIRTS) {
+        newSelection.topColor = color;
       }
       if (type === CreatingBoxStatus.PANTS) {
         newSelection.bottomColor = color;
