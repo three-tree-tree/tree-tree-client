@@ -11,6 +11,11 @@ function App(): React.ReactElement {
   const { pageState } = useGlobalContext() as GlobalContext;
 
   return (
+    <>
+    <head>
+      <meta name="google-site-verification" content="5-hXYcAsBHy9Opbw4ZM6V81ibOm1aKcdlQjRZ_ydr1c" />
+      <meta name="naver-site-verification" content="4fed00a7fec42fff4c905ccccfa8bb10afa5732e" />
+    </head>
     <div className="App">
       {pageState === PageStatus.LOADING && (
         <LoadingPage
@@ -38,6 +43,7 @@ function App(): React.ReactElement {
         />
       )}
     </div>
+    </>
   );
 }
 
