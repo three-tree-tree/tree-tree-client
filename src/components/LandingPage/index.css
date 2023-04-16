@@ -1,15 +1,13 @@
 .tree-landing-page {
   width: 100%;
   height: 100%;
-  position: flow;
-  align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .tree-landing-page {
     max-width: 768px;
   }
-}
+} */
 
 .tree-landing-page__top-logo {
   width: 56%;

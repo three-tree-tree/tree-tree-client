@@ -1,7 +1,3 @@
-:root {
-  --image-size: 70vw;
-}
-
 .tree-image-renderer {
   position: relative;
   display: inline-flex;
