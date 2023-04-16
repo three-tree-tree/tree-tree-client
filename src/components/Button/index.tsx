@@ -89,14 +89,14 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
     case ButtonTypes.COPY_LINK: {
       return (
         <div className="tree-button-source">
-          다시 만들기
+          링크 복사하기
         </div>
       )
     }
     case ButtonTypes.RETRY: {
       return (
         <div className="tree-button-source">
-          링크 복사하기
+          다시 만들기
         </div>
       )
     }

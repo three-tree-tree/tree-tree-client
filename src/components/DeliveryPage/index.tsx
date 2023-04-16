@@ -56,51 +56,54 @@ export const DeliveryPage = ({
         />
       </div>
 
+      {openPopUp === false &&
+        <>
+          <div>
+            <div className='tree-delivery-page__sparkle'>
+              <Sparkle />
+            </div>
+            그린가디언즈 합류 완료!
+            <div className='tree-delivery-page__sparkle'>
+              <Sparkle />
+            </div>
+          </div>
 
-      <div>
-        <div className='tree-delivery-page__sparkle'>
-          <Sparkle />
-        </div>
-        그린가디언즈 합류 완료!
-        <div className='tree-delivery-page__sparkle'>
-          <Sparkle />
-        </div>
-      </div>
+          <div>
+          해시태그와 함께 SNS에 공유해서<br />
+          더 많은 그린가디언즈들을 모아주세요!
+          </div>
 
-      <div>
-      해시태그와 함께 SNS에 공유해서<br />
-      더 많은 그린가디언즈들을 모아주세요!
-      </div>
+          <div className='tree-delivery-page__image-box'>
+            {imageSource && (
+              <img className='tree-delivery-page__custom-image' src={imageSource} />
+            )}
+            <div className='tree-delivery-page__tag-texts'>
+            #그린가디언즈 #깨끗한지구만들기 <br/>
+            #지구의날 #그린가디언즈_지구를지켜라
+            </div>
+          </div>
 
-      <div className='tree-delivery-page__image-box'>
-        {imageSource && (
-          <img className='tree-delivery-page__custom-image' src={imageSource} />
-        )}
-        <div className='tree-delivery-page__tag-texts'>
-        #그린가디언즈 #깨끗한지구만들기 <br/>
-        #지구의날 #그린가디언즈_지구를지켜라
-        </div>
-      </div>
+          <div>* 위의 이미지를 꾹 누르면 이미지가 저장됩니다.</div>
 
-      <div>* 위의 이미지를 꾹 누르면 이미지가 저장됩니다.</div>
-
-      <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
-      <div className='tree-delivery-page__button-wrapper'>
-        <Button
-          className='tree-delivery-page__retry'
-          onClick={() => {setPage(PageStatus.LANDING)}}
-          type={ButtonTypes.RETRY}
-        />
-      <CopyToClipboard text={SERVICE_HOST} onCopy={handleSharePopUp}>
-        <Button
-          className='tree-delivery-page__copy'
-          onClick={() => {}}
-          type={ButtonTypes.COPY_LINK}
-          />
-        </CopyToClipboard>
-      </div>
-      { openPopUp && <CompletePopup className="tree-delivery-page__popup-modal" />}
-      { openSharePopUp && <SharePopup />}
+          <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
+          <div className='tree-delivery-page__button-wrapper'>
+            <Button
+              className='tree-delivery-page__retry'
+              onClick={() => {setPage(PageStatus.LANDING)}}
+              type={ButtonTypes.RETRY}
+            />
+          <CopyToClipboard text={SERVICE_HOST} onCopy={handleSharePopUp}>
+            <Button
+              className='tree-delivery-page__copy'
+              onClick={() => {}}
+              type={ButtonTypes.COPY_LINK}
+              />
+            </CopyToClipboard>
+          </div>
+        </>
+      }
+      { openPopUp === true && <CompletePopup className="tree-delivery-page__popup-modal" />}
+      { openSharePopUp === true && <SharePopup />}
     </div>
   );
 };
