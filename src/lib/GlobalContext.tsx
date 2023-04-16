@@ -29,7 +29,7 @@ export const useGlobalContext = () => React.useContext(GlobalContext);
 export const GlobalContextProvider = ({
   children,
 }: GlobalContextProviderProps): React.ReactElement => {
-  const [pageState, setPageState] = useState<PageStatus>(PageStatus.LANDING);
+  const [pageState, setPageState] = useState<PageStatus>(PageStatus.DELIVERYING);
   const [treeStore, treeDispatcher] = useReducer(treeReducer, treeInitialState);
 
   return (

@@ -82,6 +82,8 @@ export const DeliveryPage = ({
         </div>
       </div>
 
+      <div>* 위의 이미지를 꾹 누르면 이미지가 저장됩니다.</div>
+
       <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
       <div className='tree-delivery-page__button-wrapper'>
         <Button

@@ -81,22 +81,22 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
     }
     case ButtonTypes.INSTAGRAM_SHARE: {
       return (
-        <div className="tree-button-source">
-          <InstagramButton />
+        <div className="tree-button-source share-instagram">
+          인스타그램으로 공유하기 
         </div>
       )
     }
     case ButtonTypes.COPY_LINK: {
       return (
         <div className="tree-button-source">
-          <CopyButton />
+          다시 만들기
         </div>
       )
     }
     case ButtonTypes.RETRY: {
       return (
         <div className="tree-button-source">
-          <RetryButton />
+          링크 복사하기
         </div>
       )
     }

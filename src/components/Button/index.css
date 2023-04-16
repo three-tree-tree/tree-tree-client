@@ -3,12 +3,11 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  width: 90%;
 }
 
-.tree-button,
 .tree-button-source {
   font-size: 1.25em;
-  width: 90%;
   padding: 20px;
   border: 1px solid #FFFFFF;
 }
@@ -31,4 +30,8 @@
 
 .use-elec-receipt {
   background: linear-gradient(82.21deg, #E90EF9 0%, #FF8AEC 100%);
+}
+
+.share-instagram {
+  background: linear-gradient(90deg, #0E57FF 2%, #00CAFF 100%);
 }
