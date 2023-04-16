@@ -67,8 +67,8 @@ export const prettyColor = (color: string): string => {
     case ColorTypes.GREEN: {
       return 'tree-fill-color-green'
     }
-    case ColorTypes.MINT: {
-      return 'tree-fill-color-mint'
+    case ColorTypes.WHITE: {
+      return 'tree-fill-color-white'
     }
     case ColorTypes.BLUE: {
       return 'tree-fill-color-blue'

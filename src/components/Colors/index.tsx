@@ -5,10 +5,10 @@ export const ColorTypes = {
   ORANGE: 'orange',
   YELLOW: 'yellow',
   GREEN: 'green',
-  MINT: 'mint',
   BLUE: 'blue',
   PINK: 'pink',
   PURPLE: 'purple',
+  WHITE: 'white',
 }
 export type ColorTypes = typeof ColorTypes[keyof typeof ColorTypes];
 

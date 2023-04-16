@@ -18,9 +18,9 @@
   fill: #00FF55;
   color: #00FF55;
 }
-.tree-fill-color-mint [class*='fill'] {
-  fill: #68FEC4;
-  color: #68FEC4;
+.tree-fill-color-white [class*='fill'] {
+  fill: #FFFFFF;
+  color: #FFFFFF;
 }
 .tree-fill-color-blue [class*='fill'] {
   fill: #09B3FF;

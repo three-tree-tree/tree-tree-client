@@ -25,7 +25,7 @@ const initialState: InitialState = {
   interestingIssueType: null,
   imageSource: '',
   hairStyle: 0,
-  hairColor: ColorTypes.MINT,
+  hairColor: ColorTypes.ORANGE,
   topClothes: 0,
   topColor: ColorTypes.YELLOW,
   bottomClothes: 0,
