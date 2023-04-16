@@ -9,6 +9,8 @@ import { Icon, IconTypes } from '../Icon';
 import { ImageRenderer } from '../ImageRenderer';
 import { StylesBox } from './stylesBox';
 
+import Sparkle from '../../svgs/sparkle.svg';
+
 interface CreationPageProps {
   className?: string;
 }
@@ -60,10 +62,15 @@ export const CreationPage = ({
           }}
         />
       </div>
-      <Icon
-        className='tree-creation-page__step-description'
-        type={IconTypes.STEP_2}
-      />
+
+      <div>
+        <Sparkle />
+        STEP 02
+        <Sparkle />
+      </div>
+      <div>
+      그린가디언즈의 활동복을 골라주세요!
+      </div>
       <div className='tree-creation-page__creating-box'>
         <div id='image-capture-area'>
           <ImageRenderer />
