@@ -1,0 +1,25 @@
+.tree-promise-page {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tree-promise-page__header {
+  position: relative;
+  width: 100%;
+  height: 5vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.tree-promise-page__header__back-button {
+  position: absolute;
+  left: 50px;
+}

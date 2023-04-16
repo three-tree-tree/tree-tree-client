@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { CreationPage } from './components/CreationPage';
+import { PromisePage } from './components/PromisePage';
 import { DeliveryPage } from './components/DeliveryPage';
 import { LandingPage } from './components/LandingPage';
 import { LoadingPage } from './components/LoadingPage';
@@ -24,6 +25,11 @@ function App(): React.ReactElement {
       )}
       {pageState === PageStatus.LANDING && (
         <LandingPage
+          className="tree-app-page"
+        />
+      )}
+      {pageState === PageStatus.PROMISE && (
+        <PromisePage
           className="tree-app-page"
         />
       )}

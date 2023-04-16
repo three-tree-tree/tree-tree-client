@@ -39,7 +39,7 @@ export const LandingPage = ({
   }
 
   const handleOnClickJoinButton = () => {
-    setPage(PageStatus.SELECTING);
+    setPage(PageStatus.PROMISE);
   }
 
   // return (

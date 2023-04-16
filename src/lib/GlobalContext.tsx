@@ -6,6 +6,7 @@ import treeInitialState, { InitialState } from './dux/initialState';
 export enum PageStatus {
   LOADING = 'loading-page',
   LANDING = 'landing-page',
+  PROMISE = 'promise-page',
   SELECTING = 'selection-page',
   CREATING = 'creation-page',
   DELIVERYING = 'delivery-page',
