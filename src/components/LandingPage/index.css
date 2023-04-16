@@ -3,12 +3,12 @@
   margin: 0 8%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .landing-page__title-logo {
   width: 55%;
+  margin-top: 50px;
 }
 
 .landing-page__title-logo-img {

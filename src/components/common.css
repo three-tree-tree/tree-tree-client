@@ -27,6 +27,10 @@
     width: calc(26px + 2vmin);
 }
 
+.top-title-check-button {
+    width: calc(17px + 2vmin);
+}
+
 .page__next-btn {
     position: relative;
     width: 100%;

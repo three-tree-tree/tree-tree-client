@@ -3,7 +3,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 
 .tree-button-source {
@@ -16,6 +16,23 @@
   font-weight: 600;
   padding: calc(12px + 2vmin) 0;
   margin-top: calc(17px + 2vmin);
+}
+
+.tree-button-source-copy-link {
+  background: none;
+  margin-left: calc(8.5px + 2vmin);
+}
+
+.tree-button-source-retry {
+  background: none;
+  margin-right: calc(8.5px + 2vmin);
+}
+
+.landing-page__start-btn__icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);       
+  right: calc(12px + 2vmin);
 }
 
 .save-paper {

@@ -5,6 +5,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { Button, ButtonTypes } from '../Button';
 
 import './index.css';
+import IcNextButton from '../Icon/next-button.svg'
 
 interface CompleteButtonProps {
   className?: string;
@@ -34,12 +35,14 @@ export const CompleteButton = ({
     }
     
    return (
-        <CopyToClipboard text={HASH_TAG_MESSAGE} onCopy={handleOnCopy}>
-          <Button
-            className={className}
-            onClick={() => {}}
-            type={ButtonTypes.INSTAGRAM_SHARE}
-          />
-        </CopyToClipboard>
-    );
+    <CopyToClipboard text={HASH_TAG_MESSAGE} onCopy={handleOnCopy}>
+      <div className='landing-page__start-btn'>
+        <div></div>
+        인스타그램으로 공유하기
+        <div className='landing-page__start-btn__icon'>
+          <IcNextButton />
+        </div>
+      </div>
+    </CopyToClipboard>
+  );
 };

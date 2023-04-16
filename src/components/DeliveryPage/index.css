@@ -37,11 +37,10 @@
   align-items: center;
 
   background-color: white;
-  width: calc(100% - 14vw);
+  width: 100%;
   height: fit-content;
-  border-radius: 40px;
-  margin-top: 1vh;
-  margin-bottom: 2vh;
+  border-radius: 20px;
+  margin-bottom: calc(10px + 2vmin);
   padding-top: 3vh;
 }
 
@@ -60,8 +59,7 @@
 }
 
 .tree-delivery-page__popup-modal {
-  width: 82%;
-  height: 80%;
+  width: 84%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -74,10 +72,21 @@
   text-align: center;
   background: white;
   color: #182E6A;
+  border-radius: 20px;
+  padding: calc(17px + 2vmin);
+  box-sizing: border-box;
+}
+
+.tree-delivery-page__popup-modal_back p {
+  margin-top: calc(26px + 2vmin);
 }
 
 .tree-delivery-page__popup-modal__title {
-  font-size: 1.25em;
+  font-size: calc(8px + 2vmin);
+  font-weight: 600;
+  padding-top: calc(9px + 2vmin);
+  padding-bottom: calc(26px + 2vmin);
+  border-bottom: solid 1px #DEDEDE;
 }
 
 .tree-delivery-page__popup-modal_img {
@@ -103,9 +112,8 @@
 
 .tree-delivery-page__button-wrapper {
   position: relative;
-  width: 90%;
-  height: 7%;
-  display: inline-flex;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -113,15 +121,29 @@
 
 
 .tree-delivery-page__share-popup {
-  width: 80%;
+  width: 84%;
   position: fixed;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #0B3260;
-  padding: 30px 0;
+  padding: calc(12px + 2vmin) 0;
+  font-weight: 600;
 }
 
 .tree-delivery-page__sparkle {
   width: 15px;
+}
+
+.delivery-page__image-box-wrap {
+  width: 100%;
+}
+
+.delivery-page__button-list-wrap {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.tree-delivery-page__copy {
+  margin-left: 10px;
 }

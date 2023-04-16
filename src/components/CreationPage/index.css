@@ -31,12 +31,9 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-
   background-color: white;
-  width: calc(100% - 14vw);
-  height: calc(100% - 100px);
-  border-radius: 40px;
-  margin-top: 1vh;
+  width: 100%;
+  border-radius: 20px;
   margin-bottom: 5vh;
   padding-top: 3vh;
 }
@@ -57,7 +54,7 @@
 
 .creating-control-box__menu {
   display: inline-flex;
-  width: 90%;
+  width: 100%;
   justify-content: space-between;
   margin-top: 20px;
   flex-direction: row;
@@ -76,7 +73,7 @@
   display: inline-flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh;
 }
@@ -136,6 +133,14 @@
   display: inline-flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 2vh;
+}
+
+.creation-page__content-wrap {
+  margin: 30px 0;
+}
+
+.creation-page__content p {
+  margin-top: calc(17px + 2vmin);
 }

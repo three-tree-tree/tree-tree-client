@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
+import '../common.css'
 import html2canvas from 'html2canvas';
 
 import { CHANGE_COLOR, SAVE_IMAGE, SELECT_ITEM } from '../../lib/dux/actionTypes';
@@ -9,7 +10,10 @@ import { Icon, IconTypes } from '../Icon';
 import { ImageRenderer } from '../ImageRenderer';
 import { StylesBox } from './stylesBox';
 
+import TopTitleLogo from '../Icon/logo.svg'
+import BackButton from '../Icon/left-arrow.svg'
 import Sparkle from '../../svgs/sparkle.svg';
+import CheckButton from '../Icon/check-button.svg'
 
 interface CreationPageProps {
   className?: string;
@@ -37,8 +41,8 @@ export const CreationPage = ({
   const [itemColor, setItemColor] = useState<ColorTypes>(hairColor);
 
   return (
-    <div className={`${className} tree-creation-page`}>
-      <div className='tree-creation-page__header'>
+    <div className={`${className} container`}>
+      {/* <div className='tree-creation-page__header'>
         <Icon
           className='tree-creation-page__header__back-button'
           type={IconTypes.LEFT_ARROW}
@@ -64,16 +68,59 @@ export const CreationPage = ({
               })
           }}
         />
+      </div> */}
+
+      <div className='top-title'>
+        <div className='back-button' onClick={() => {setPage(PageStatus.SELECTING)}}>
+          <BackButton />
+        </div>
+        <div className='top-title-logo'>
+          <TopTitleLogo />
+        </div>
+        <div className='top-title-right'>
+          <div className='top-title-check-button'
+            onClick={() => {
+              html2canvas(document.getElementById('image-capture-area') as HTMLElement, {})
+                .then(canvas => {
+                  treeDispatcher({
+                    type: SAVE_IMAGE,
+                    payload: canvas.toDataURL('image/png'),
+                  })
+                  setPage(PageStatus.DELIVERYING)
+                })
+            }}
+          >
+            <CheckButton />
+          </div>
+        </div>
       </div>
 
-      <div>
+      {/* <div>
         <Sparkle />
         STEP 02
         <Sparkle />
       </div>
       <div>
       그린가디언즈의 활동복을 골라주세요!
+      </div> */}
+
+      <div className='creation-page__content-wrap'>
+        <div className='page__content-title'>
+          <div className='page__content-title-sparkle'>
+            <Sparkle />
+          </div>
+          <p>STEP 02</p>
+          <div className='page__content-title-sparkle'>
+            <Sparkle />
+          </div>
+        </div>
+        <div className='creation-page__content'>
+          <p>
+            그린가디언즈의 활동복을 골라주세요!
+          </p>
+        </div>
       </div>
+
       <div className='tree-creation-page__creating-box'>
         <div id='image-capture-area'>
           <ImageRenderer />
