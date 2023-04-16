@@ -1,12 +1,6 @@
 import React from 'react';
 import './index.css';
 
-import StartJoin from './start-join.svg';
-import FeedButton from './feed-button.svg';
-import InstagramButton from './instagram-button.svg';
-import CopyButton from './copy-img.svg';
-import RetryButton from './retry-img.svg';
-
 export interface ButtonProps {
   className?: string;
   type: ButtonTypes;
@@ -15,13 +9,11 @@ export interface ButtonProps {
 }
 
 export enum ButtonTypes {
-  START_JOIN,
   SAVE_PAPER,
   REDUCE_TRASH,
   SAVE_ENERGY,
   USE_BASKET,
   USE_ELEC_RECEIPT,
-  INSTAGRAM_FEED,
   INSTAGRAM_SHARE,
   RETRY,
   COPY_LINK,
@@ -30,13 +22,6 @@ export enum ButtonTypes {
 const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.ReactElement => {
   const { type, disabled } = props;
   switch (type) {
-    case ButtonTypes.START_JOIN: {
-      return (
-        <div className='tree-button-source start-to-join'>
-          <StartJoin />
-        </div>
-      )
-    }
     case ButtonTypes.SAVE_PAPER: {
       return (
         <div className='tree-button-source save-paper'>
@@ -69,13 +54,6 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
       return (
         <div className='tree-button-source use-elec-receipt'>
           전자 영수증 / 모바일 청구서 이용하기
-        </div>
-      )
-    }
-    case ButtonTypes.INSTAGRAM_FEED: {
-      return (
-        <div className="tree-button-source">
-          <FeedButton />
         </div>
       )
     }

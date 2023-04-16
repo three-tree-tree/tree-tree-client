@@ -91,7 +91,7 @@ export const Icon = ({
         return <div className='tree-icon creating-box-icon' ><ShoesBlueIcon /></div>
       }
       default:
-        return <span style={{ fontSize: 34 }}>'지구방위대'</span>
+        return <span style={{ fontSize: 34 }}>'그린가디언즈'</span>
     }
   }, [type]);
 
