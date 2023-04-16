@@ -6,8 +6,8 @@
 <path d="M345.641 479.91L365.381 413L327.201 400.9C327.201 400.9 312.001 430.54 298.001 455.63C286.601 476.1 307.781 501.68 307.781 501.68C307.781 501.68 300.171 515.85 304.481 526.41C309.801 539.46 335.551 541.58 351.211 515.22" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M341.92 473.5L334.74 468.37" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M516.66 473.5L523.84 468.37" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M257.438 266.001L181.402 300.509L225.489 397.653L301.525 363.145L257.438 266.001Z" class="fill" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M233.192 292.489L166.131 342.238L229.691 427.916L296.753 378.166L233.192 292.489Z" class="fill" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M257.438 266.001L181.402 300.509L225.489 397.653L301.525 363.145L257.438 266.001Z" fill="#FFFFFF" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M233.192 292.489L166.131 342.238L229.691 427.916L296.753 378.166L233.192 292.489Z" fill="#FFFFFF" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M185.221 347.17L230.381 312.79" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M195.279 357.73L238.509 324.81" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M204.51 369.85L247.74 336.93" stroke="#0A13FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
