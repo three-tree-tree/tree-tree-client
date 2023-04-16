@@ -9,10 +9,9 @@ import { PageStatus, useGlobalContext, GlobalContext } from '../../lib/GlobalCon
 
 import { CompleteButton } from './CompleteButton';
 import { CompletePopup } from './CompletePopup';
-import MainContent from './step-3.svg';
-import ImageGuide from './image-guide.svg'
-import TagTexts from './tag-texts.svg';
 import { SharePopup } from './SharePopup';
+
+import Sparkle from '../../svgs/sparkle.svg';
 
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 const SERVICE_HOST = "https://three-tree-tree.github.io/"
@@ -56,20 +55,33 @@ export const DeliveryPage = ({
           type={IconTypes.LOGO}
         />
       </div>
-      <div className='tree-delivery-page__main-content'>
-        <MainContent />
+
+
+      <div>
+        <div className='tree-delivery-page__sparkle'>
+          <Sparkle />
+        </div>
+        그린가디언즈 합류 완료!
+        <div className='tree-delivery-page__sparkle'>
+          <Sparkle />
+        </div>
       </div>
+
+      <div>
+      해시태그와 함께 SNS에 공유해서<br />
+      더 많은 그린가디언즈들을 모아주세요!
+      </div>
+
       <div className='tree-delivery-page__image-box'>
         {imageSource && (
           <img className='tree-delivery-page__custom-image' src={imageSource} />
         )}
         <div className='tree-delivery-page__tag-texts'>
-          <TagTexts />
+        #그린가디언즈 #깨끗한지구만들기 <br/>
+        #지구의날 #그린가디언즈_지구를지켜라
         </div>
       </div>
-      <div className='tree-delivery-page__image-guide'>
-        <ImageGuide />
-      </div>
+
       <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
       <div className='tree-delivery-page__button-wrapper'>
         <Button

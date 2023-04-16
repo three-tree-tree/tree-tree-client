@@ -4,7 +4,7 @@ import { GlobalContext, useGlobalContext } from '../../lib/GlobalContext';
 import { ImageSource } from './imageSource';
 import './index.css';
 
-import BackgroundImage from './background.svg';
+import BackgroundImage from './background.png';
 import App_Cloak from './shirts/app/app_cape.svg';
 import Bag_Cloak from './shirts/bag/bag_cape.svg';
 import Cup_Cloak from './shirts/cup/cup_cape.svg';
@@ -69,7 +69,7 @@ export const ImageRenderer = ({
   return (
     <div className='tree-image-renderer'>
       <div className='tree-iamge-source absolute-wrapper'>
-        <BackgroundImage />
+        <img className='tree-image-source__background' src={BackgroundImage} />
         {longHair}
         {cloak}
       </div>
