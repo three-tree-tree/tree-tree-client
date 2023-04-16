@@ -4,7 +4,6 @@ import treeReducer from './dux/reducer';
 import treeInitialState, { InitialState } from './dux/initialState';
 
 export enum PageStatus {
-  LOADING = 'loading-page',
   LANDING = 'landing-page',
   PROMISE = 'promise-page',
   SELECTING = 'selection-page',
@@ -29,7 +28,7 @@ export const useGlobalContext = () => React.useContext(GlobalContext);
 export const GlobalContextProvider = ({
   children,
 }: GlobalContextProviderProps): React.ReactElement => {
-  const [pageState, setPageState] = useState<PageStatus>(PageStatus.DELIVERYING);
+  const [pageState, setPageState] = useState<PageStatus>(PageStatus.LANDING);
   const [treeStore, treeDispatcher] = useReducer(treeReducer, treeInitialState);
 
   return (
