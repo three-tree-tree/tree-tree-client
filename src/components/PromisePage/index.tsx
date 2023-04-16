@@ -83,7 +83,7 @@ export const PromisePage = ({
   return (
     <div className='container'>
       <div className='top-title'>
-        <div className='back-button'>
+        <div className='back-button' onClick={() => {setPage(PageStatus.LANDING)}}>
           <BackButton />
         </div>
         <div className='top-title-logo'>

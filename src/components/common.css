@@ -37,6 +37,7 @@
     font-weight: 600;
     padding: calc(12px + 2vmin) 0;
     margin-top: calc(26px + 2vmin);
+    margin-bottom: 30px;
 }
 
 .page__next-btn__icon {
@@ -45,5 +46,21 @@
     top: 50%;
     transform: translate(0, -50%);       
     right: calc(12px + 2vmin);
-    margin-bottom: 30px;
 }
+
+.page__content-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(8px + 2vmin);
+    font-weight: 600;
+  }
+  
+  .page__content-title p {
+    margin: 0 calc(5px + 2vmin);
+  }
+  
+  .page__content-title-sparkle {
+    width: 4%;
+  }
