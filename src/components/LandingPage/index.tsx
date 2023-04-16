@@ -3,7 +3,7 @@ import { GlobalContext, PageStatus, useGlobalContext } from '../../lib/GlobalCon
 import axios from 'axios';
 import CountUp from 'react-countup';
 
-import TopLogo from './top_logo.svg';
+import TopLogo from './top-logo.png';
 import Earth from './earth.png';
 import Sparkle from './sparkle.png';
 import IcNextButton from '../Icon/next-button.svg'
@@ -53,7 +53,7 @@ export const LandingPage = ({
   return (
     <div className='`${className} landing-page__container'>
       <div className='landing-page__title-logo'>
-        <TopLogo />
+        <img className='landing-page__title-logo-img' src={TopLogo} />
       </div>
       <div className='landing-page__people-count-wrap'>
         <p>현재까지 합류한 그린 가디언즈</p>
