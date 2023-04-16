@@ -23,3 +23,15 @@
   position: absolute;
   left: 50px;
 }
+
+.tree-promise-page__promise-background {
+  width: 90%;
+  margin: 5%;
+  border-radius: 1%;
+  background-color: white;
+  color: #182E6A;
+}
+
+.tree-promise-page__promise-content {
+  color: #182E6A;
+}

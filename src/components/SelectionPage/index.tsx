@@ -21,7 +21,7 @@ export const SelectionPage = ({
           className='tree-selection-page__header__back-button'
           type={IconTypes.LEFT_ARROW}
           onClick={() => {
-            setPage(PageStatus.LANDING)
+            setPage(PageStatus.PROMISE)
           }}
         />
         <Icon
