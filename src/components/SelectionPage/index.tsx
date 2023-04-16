@@ -6,7 +6,7 @@ import { Icon, IconTypes } from '../Icon';
 import './index.css';
 import { InterestingIssueType } from '../../lib/dux/initialState';
 
-import Sparkle from './sparkle.svg';
+import Sparkle from '../../svgs/sparkle.svg';
 
 export interface SelectionPageProps {
   className?: string;
