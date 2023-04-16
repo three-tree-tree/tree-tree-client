@@ -17,6 +17,7 @@ function App(): React.ReactElement {
     //   <meta name="naver-site-verification" content="4fed00a7fec42fff4c905ccccfa8bb10afa5732e" />
     // </head>
     <div className="App">
+      <div className='background-wrap'></div>
       {pageState === PageStatus.LANDING && (
         <LandingPage
           className="tree-app-page"

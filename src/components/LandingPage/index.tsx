@@ -7,6 +7,8 @@ import CountUp from 'react-countup';
 
 import TopLogo from './top_logo.svg';
 import Earth from './earth.svg';
+import Sparkle from './sparkle.png';
+import IcNextButton from '../Icon/next-button.svg'
 import Superman from './superman.svg';
 
 import './index.css';
@@ -75,39 +77,71 @@ export const LandingPage = ({
   //   </div>
   // );
 
+  // return (
+  //   <div className={`${className} tree-landing-page`}>
+  //     <div className='tree-landing-page__top-logo'>
+  //       <TopLogo />
+  //     </div>
+  //     <div className='tree-landing-page__people-count-wrapper'>
+  //       <div>현재까지 합류한 그린 가디언즈</div>
+  //       <div className='tree-landing-page__people-count'>
+  //         <CountUp 
+  //           start={peopleCount - 20} 
+  //           end={peopleCount}
+  //           duration={7}
+  //           suffix='명'
+  //         />
+  //       </div>
+  //     </div>
+  //     <div className='tree-landing-page__main-logo'>
+  //       <div className='tree-landing-page__main-logo__earth'>
+  //         <Earth />
+  //       </div>
+  //     </div>
+
+  //     <div className='tree-landing-page__content'>
+  //     우리의 아름다운 별, 지구가 아파하고 있어요. <br />
+  //     지구를 지키기 위한 그린 가디언즈가 되어주세요!
+  //     </div>
+
+  //     <div className='tree-landing-page__start-button' onClick={handleOnClickJoinButton}>
+  //         그린 가디언즈 합류하기
+  //       <span className='tree-landing-page__start-button__gt'>&gt;</span>
+  //     </div>
+
+  //     <div className='tree-landing-page__sparkle-bg' />
+  //   </div>
+  // )
+
   return (
-    <div className={`${className} tree-landing-page`}>
-      <div className='tree-landing-page__top-logo'>
+    <div className='`${className} landing-page__container'>
+      <div className='landing-page__title-logo'>
         <TopLogo />
       </div>
-      <div className='tree-landing-page__people-count-wrapper'>
-        <div>현재까지 합류한 그린 가디언즈</div>
-        <div className='tree-landing-page__people-count'>
-          <CountUp 
+      <div className='landing-page__people-count-wrap'>
+        <p>현재까지 합류한 그린 가디언즈</p>
+        <CountUp 
             start={peopleCount - 20} 
             end={peopleCount}
             duration={7}
             suffix='명'
           />
+      </div>
+      <div className='landing-page__main-logo'>
+        <Earth />
+        <img className='landing-page__main-logo-bg' src={Sparkle} />
+      </div>
+      <p className='landing-page__content'>
+        우리의 아름다운 별, 지구가 아파하고 있어요.<br></br>
+        지구를 지키기 위한 그린 가디언즈가 되어주세요!
+      </p>
+      <div className='landing-page__start-btn' onClick={handleOnClickJoinButton}>
+        <div></div>
+        그린 가디언즈 합류하기
+        <div className='landing-page__start-btn__icon'>
+          <IcNextButton />
         </div>
       </div>
-      <div className='tree-landing-page__main-logo'>
-        <div className='tree-landing-page__main-logo__earth'>
-          <Earth />
-        </div>
-      </div>
-
-      <div className='tree-landing-page__content'>
-      우리의 아름다운 별, 지구가 아파하고 있어요. <br />
-      지구를 지키기 위한 그린 가디언즈가 되어주세요!
-      </div>
-
-      <div className='tree-landing-page__start-button' onClick={handleOnClickJoinButton}>
-          그린 가디언즈 합류하기
-        <span className='tree-landing-page__start-button__gt'>&gt;</span>
-      </div>
-
-      <div className='tree-landing-page__sparkle-bg' />
     </div>
   )
 };

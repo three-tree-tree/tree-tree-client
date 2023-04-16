@@ -1,67 +1,60 @@
-.tree-landing-page {
-  width: 100%;
+.landing-page__container {
   height: 100%;
+  margin: 0 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* @media only screen and (min-width: 768px) {
-  .tree-landing-page {
-    max-width: 768px;
-  }
-} */
-
-.tree-landing-page__top-logo {
-  width: 56%;
-  margin-left: 22%;
-  margin-right: 22%;
-  margin-top: 15%;
+.landing-page__title-logo {
+  width: 55%;
 }
 
-.tree-landing-page__people-count-wrapper {
-  font-weight: 400;
-}
-
-.tree-landing-page__people-count {
-  font-size: 1.5em; 
+.landing-page__people-count-wrap {
+  font-size: calc(16px + 2vmin);
   font-weight: 350;
+  margin-top: calc(26px + 2vmin);
 }
 
-.tree-landing-page__main-logo {
+.landing-page__people-count-wrap p {
+  font-size: calc(6px + 2vmin);
+  font-weight: 600;
+}
+
+.landing-page__main-logo {
   position: relative;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 100%;
 }
 
-.tree-landing-page__content {
-  font-weight: 350;
-  margin-top: 10%;
-}
-
-.tree-landing-page__start-button {
-  width: 82%;
-  margin-left: 9%;
-  padding: 32px 0;
-  background: linear-gradient(90deg, #0E57FF 2%, #00CAFF 100%);
-  border: 1px solid #FFFFFF;
-  font-size: 1.15em;
-  margin-top: 5%;
-}
-
-.tree-landing-page__start-button__gt {
-  /* TODO: 우측 정렬 적용 필요 */
-  text-align: right;
-}
-
-.tree-landing-page__sparkle-bg {
-/* TODO: height 자동으로 계산되도록 수정 필요 */
-/* TODO: z-index로 인해 안보이는 문제 수정 필요 */
-  width: 86%;
-  height: 60%;
-  background-image: url('./sparkle.png');
-  background-repeat: no-repeat;
-  background-size: 90%;
+.landing-page__main-logo-bg {
+  width: 100%;
   position: absolute;
-  top: 7%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
   z-index: -1;
+}
+
+.landing-page__content {
+  margin-top: calc(46px + 2vmin);
+}
+
+.landing-page__start-btn {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to right, #0E57FF, #00CAFF);
+  border: solid 1px #FFFFFF;
+  box-sizing: border-box;
+  font-size: calc(8px + 2vmin);
+  font-weight: 600;
+  padding: calc(12px + 2vmin) 0;
+  margin-top: calc(26px + 2vmin);
+}
+
+.landing-page__start-btn__icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);       
+  right: calc(12px + 2vmin);
 }
