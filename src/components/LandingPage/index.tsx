@@ -4,7 +4,7 @@ import axios from 'axios';
 import CountUp from 'react-countup';
 
 import TopLogo from './top_logo.svg';
-import Earth from './earth.svg';
+import Earth from './earth.png';
 import Sparkle from './sparkle.png';
 import IcNextButton from '../Icon/next-button.svg'
 
@@ -59,8 +59,8 @@ export const LandingPage = ({
         <p>현재까지 합류한 그린 가디언즈</p>
         {
           peopleCount &&
-          <CountUp 
-            start={getPeopleStartCount()} 
+          <CountUp
+            start={getPeopleStartCount()}
             end={peopleCount}
             duration={7}
             suffix='명'
@@ -72,7 +72,7 @@ export const LandingPage = ({
         }
       </div>
       <div className='landing-page__main-logo'>
-        <Earth />
+        <img className='landing-page__main-logo-earth' src={Earth} />
         <img className='landing-page__main-logo-bg' src={Sparkle} />
       </div>
       <p className='landing-page__content'>

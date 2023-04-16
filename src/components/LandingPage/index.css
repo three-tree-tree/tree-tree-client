@@ -58,3 +58,7 @@
   transform: translate(0, -50%);       
   right: calc(12px + 2vmin);
 }
+
+.landing-page__main-logo-earth {
+  width: 100%;
+}
