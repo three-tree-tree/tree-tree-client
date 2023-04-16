@@ -6,6 +6,8 @@ import { Icon, IconTypes } from '../Icon';
 import './index.css';
 import { InterestingIssueType } from '../../lib/dux/initialState';
 
+import Sparkle from './sparkle.svg';
+
 export interface SelectionPageProps {
   className?: string;
 }
@@ -29,10 +31,18 @@ export const SelectionPage = ({
           type={IconTypes.LOGO}
         />
       </div>
-      <Icon
-        className='tree-selection-page__step-description'
-        type={IconTypes.STEP_1}
-      />
+      <div>
+        <Sparkle />
+        STEP 01
+        <Sparkle />
+      </div>
+      <div>
+        그린가디언즈로서 모범이 되기 위해<br/>
+        어떤 노력을 할 것인지 한 가지 선택해주세요!
+      </div>
+
+      <div>* 선택에 따라, 가디언즈의 아이템이 바뀌어요.</div>
+
       <div className='tree-selection-page__selections'>
         <Button
           type={ButtonTypes.SAVE_PAPER}

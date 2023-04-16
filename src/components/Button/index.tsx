@@ -2,16 +2,6 @@ import React from 'react';
 import './index.css';
 
 import StartJoin from './start-join.svg';
-import SavePaper from './save-paper.svg';
-import SavePaperDisabled from './save-paper-disabled.svg';
-import ReduceTrash from './reduce-trash.svg';
-import ReduceTrashDisabled from './reduce-trash-disabled.svg';
-import SaveEnergy from './save-energy.svg';
-import SaveEnergyDisabled from './save-energy-disabled.svg';
-import UseBasket from './use-basket.svg';
-import UseBasketDisabled from './use-basket-disabled.svg';
-import UseElecReceipt from './use-elec-receipt.svg';
-import UseElecReceiptDisabled from './use-elec-receipt-disabled.svg';
 import FeedButton from './feed-button.svg';
 import InstagramButton from './instagram-button.svg';
 import CopyButton from './copy-img.svg';
@@ -50,35 +40,35 @@ const ImageSource = (props: { type: ButtonTypes, disabled: boolean }): React.Rea
     case ButtonTypes.SAVE_PAPER: {
       return (
         <div className='tree-button-source save-paper'>
-          {disabled ? <SavePaperDisabled /> : <SavePaper /> }
+          이면지 사용 등 종이 아껴쓰기
         </div>
       )
     }
     case ButtonTypes.REDUCE_TRASH: {
       return (
         <div className='tree-button-source reduce-trash'>
-          {disabled ? <ReduceTrashDisabled /> : <ReduceTrash />}
+          일회용품 / 플라스틱 사용 줄이기
         </div>
       )
     }
     case ButtonTypes.SAVE_ENERGY: {
       return (
         <div className='tree-button-source save-energy'>
-          {disabled ? <SaveEnergyDisabled /> : <SaveEnergy />}
+          물, 전기 등 에너지 절약하기
         </div>
       )
     }
     case ButtonTypes.USE_BASKET: {
       return (
         <div className='tree-button-source use-basket'>
-          {disabled ? <UseBasketDisabled /> : <UseBasket />}
+          비닐봉투 대신 장바구니 이용하기
         </div>
       )
     }
     case ButtonTypes.USE_ELEC_RECEIPT: {
       return (
         <div className='tree-button-source use-elec-receipt'>
-          {disabled ? <UseElecReceiptDisabled /> : <UseElecReceipt />}
+          전자 영수증 / 모바일 청구서 이용하기
         </div>
       )
     }
@@ -124,7 +114,7 @@ export const Button = ({
 
   return (
     <div
-      className={`${className} tree-button`}
+      className={`tree-button`}
       onClick={onClick}
     >
       <ImageSource type={type} disabled={disabled} />

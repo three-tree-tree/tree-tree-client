@@ -7,5 +7,28 @@
 
 .tree-button,
 .tree-button-source {
-  width: 90%
+  font-size: 1.25em;
+  width: 90%;
+  padding: 20px;
+  border: 1px solid #FFFFFF;
+}
+
+.save-paper {
+  background: linear-gradient(82.21deg, #1BCB9B 0%, #65E4EC 100%);
+}
+
+.reduce-trash {
+  background: linear-gradient(82.21deg, #0099F9 0%, #29EBFF 98%);
+}
+
+.save-energy {
+  background: linear-gradient(82.21deg, #0E57FF 2%, #00CAFF 100%);
+}
+
+.use-basket {
+  background: linear-gradient(82.21deg, #6D10F9 0%, #D851F9 100%);
+}
+
+.use-elec-receipt {
+  background: linear-gradient(82.21deg, #E90EF9 0%, #FF8AEC 100%);
 }
