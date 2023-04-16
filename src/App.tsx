@@ -4,7 +4,6 @@ import { CreationPage } from './components/CreationPage';
 import { PromisePage } from './components/PromisePage';
 import { DeliveryPage } from './components/DeliveryPage';
 import { LandingPage } from './components/LandingPage';
-import { LoadingPage } from './components/LoadingPage';
 import { SelectionPage } from './components/SelectionPage';
 import { GlobalContext, PageStatus, useGlobalContext } from './lib/GlobalContext';
 
@@ -18,11 +17,6 @@ function App(): React.ReactElement {
     //   <meta name="naver-site-verification" content="4fed00a7fec42fff4c905ccccfa8bb10afa5732e" />
     // </head>
     <div className="App">
-      {pageState === PageStatus.LOADING && (
-        <LoadingPage
-          className="tree-app-page"
-        />
-      )}
       {pageState === PageStatus.LANDING && (
         <LandingPage
           className="tree-app-page"
