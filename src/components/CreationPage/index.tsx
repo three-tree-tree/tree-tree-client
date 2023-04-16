@@ -29,9 +29,12 @@ export const CreationPage = ({
   const {
     setPage,
     treeDispatcher,
+    treeStore,
   } = useGlobalContext() as GlobalContext;
+  const { hairColor } = treeStore;
+
   const [boxState, setBoxState] = useState<CreatingBoxStatus>(CreatingBoxStatus.HAIR);
-  const [itemColor, setItemColor] = useState<ColorTypes>(ColorTypes.WHITE);
+  const [itemColor, setItemColor] = useState<ColorTypes>(hairColor);
 
   return (
     <div className={`${className} tree-creation-page`}>
