@@ -27,15 +27,14 @@
 }
 
 .tree-creation-page__creating-box {
-  position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
   width: 100%;
   border-radius: 20px;
-  margin-bottom: 5vh;
-  padding-top: 3vh;
+  padding: 26px;
+  box-sizing: border-box;
 }
 
 .image-capture-area {
@@ -49,24 +48,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 60px);
+  width: 100%;
 }
 
 .creating-control-box__menu {
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 2vh;
   flex-direction: row;
-  padding-bottom: 14px;
+  align-items: center;
+  padding-bottom: 2vh;
   border-bottom: 1px solid gray;
 }
 
 .creating-control-box__menu__item {
   display: inline-flex;
-  width: 12vw;
-  margin-top: 0.6vh;
-  margin-bottom: 0.6vh;
+  width: 14vw;
 }
 
 .creating-control-box__colors {
@@ -74,8 +72,7 @@
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 1.5vh;
-  margin-bottom: 1.5vh;
+  margin: 2vh 0 2vh;
 }
 
 .creating-control-box__colors__item {
@@ -137,10 +134,20 @@
   margin-bottom: 2vh;
 }
 
-.creation-page__content-wrap {
-  margin: 30px 0;
+.tree-styles-box__row:last-child {
+  margin-bottom: 0;
 }
 
-.creation-page__content p {
-  margin-top: calc(17px + 2vmin);
+.creation-page__content {
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+}
+
+.creation-page__content-wrap {
+  width: 100%;
+}
+
+.creation-page__container.container {
+  padding-bottom: 8vw;
+  height: auto;
 }

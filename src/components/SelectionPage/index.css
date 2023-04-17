@@ -2,19 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px 0;
 }
 
 .selection-page__content {
-  font-size: calc(8px + 2vmin);
-  margin-top: calc(17px + 2vmin);
+  font-size: 1.6rem;
 }
 
 .selection-page__content p:last-child {
-  font-size: calc(6px + 2vmin);
-  margin-top: calc(43px + 2vmin);
+  font-size: 1.4rem;
+  margin-top: 50px;
 }
 
 .selection-page__button_list {
-  margin-bottom: 30px;
+  width: 100%;
+  padding-bottom: 8vw;
 }

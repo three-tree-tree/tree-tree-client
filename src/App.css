@@ -1,15 +1,16 @@
 .App {
-  font-size: calc(10px + 2vmin);
   font-weight: 350;
   line-height: 1.5;
   text-align: center;
   color: white;
-  font-size: calc(6px + 2vmin);
+  font-size: 1.4rem;
+  word-break: keep-all;
 }
 
 :root {
+  font-size: 62.5%;
   width: 100%;
-  --image-size: 70vw;
+  --image-size: calc(84vw - 52px);
 }
 
 .background-wrap {

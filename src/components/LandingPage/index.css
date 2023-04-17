@@ -1,4 +1,5 @@
 .landing-page__container {
+  position: relative;
   height: 100%;
   margin: 0 8%;
   display: flex;
@@ -7,27 +8,33 @@
 }
 
 .landing-page__title-logo {
-  width: 55%;
+  width: 55vmin;
   margin-top: 50px;
+  z-index: 10;
 }
 
 .landing-page__title-logo-img {
   width: 100%;
+  filter: drop-shadow(0 3px 20px rgba(4, 10, 161, 0.3));
 }
 .landing-page__people-count-wrap {
-  font-size: calc(16px + 2vmin);
+  font-size: 2.4rem;
   font-weight: 350;
-  margin-top: calc(26px + 2vmin);
+  margin-top: 30px;
+  z-index: 10;
 }
 
 .landing-page__people-count-wrap p {
-  font-size: calc(6px + 2vmin);
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
 .landing-page__main-logo {
-  position: relative;
-  width: 100%;
+  width: 80vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .landing-page__main-logo-bg {
@@ -35,12 +42,18 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -65%);
+  transform: translate(-50%, -68%);
   z-index: -1;
 }
 
+.landing-page__content-wrap {
+  width: 84%;
+  position: fixed;
+  bottom: 8vw;
+}
+
 .landing-page__content {
-  margin-top: calc(46px + 2vmin);
+  margin-top: 30px;
 }
 
 .landing-page__start-btn {
@@ -49,17 +62,17 @@
   background: linear-gradient(to right, #0E57FF, #00CAFF);
   border: solid 1px #FFFFFF;
   box-sizing: border-box;
-  font-size: calc(8px + 2vmin);
+  font-size: 1.6rem;
   font-weight: 600;
-  padding: calc(12px + 2vmin) 0;
-  margin-top: calc(26px + 2vmin);
+  padding: 20px 0;
+  margin-top: 30px;
 }
 
 .landing-page__start-btn__icon {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);       
-  right: calc(12px + 2vmin);
+  right: 20px;
 }
 
 .landing-page__main-logo-earth {

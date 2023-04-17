@@ -5,7 +5,7 @@ import CountUp from 'react-countup';
 
 import TopLogo from './top-logo.png';
 import Earth from './earth.png';
-import Sparkle from './sparkle.png';
+import Sparkle from './sparkle.svg';
 import IcNextButton from '../Icon/next-button.svg'
 
 import './index.css';
@@ -73,17 +73,22 @@ export const LandingPage = ({
       </div>
       <div className='landing-page__main-logo'>
         <img className='landing-page__main-logo-earth' src={Earth} />
-        <img className='landing-page__main-logo-bg' src={Sparkle} />
+        {/* <img className='landing-page__main-logo-bg' src={Sparkle} /> */}
+        <div className='landing-page__main-logo-bg'>
+          <Sparkle />
+        </div>
       </div>
-      <p className='landing-page__content'>
-        우리의 아름다운 별, 지구가 아파하고 있어요.<br />
-        지구를 지키기 위한 그린 가디언즈가 되어주세요!
-      </p>
-      <div className='landing-page__start-btn' onClick={handleOnClickJoinButton}>
-        <div></div>
-        그린 가디언즈 합류하기
-        <div className='landing-page__start-btn__icon'>
-          <IcNextButton />
+      <div className='landing-page__content-wrap'>
+        <p className='landing-page__content'>
+          우리의 아름다운 별, 지구가 아파하고 있어요.<br />
+          지구를 지키기 위한 그린 가디언즈가 되어주세요!
+        </p>
+        <div className='landing-page__start-btn' onClick={handleOnClickJoinButton}>
+          <div></div>
+          그린 가디언즈 합류하기
+          <div className='landing-page__start-btn__icon'>
+            <IcNextButton />
+          </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ import { CompleteButton } from './CompleteButton';
 import { CompletePopup } from './CompletePopup';
 import { SharePopup } from './SharePopup';
 
-import TopTitleLogo from '../Icon/logo.svg'
+import TopTitleLogo from '../Icon/logo.png'
 import BackButton from '../Icon/left-arrow.svg'
 import Sparkle from '../../svgs/sparkle.svg';
 
@@ -62,9 +62,7 @@ export const DeliveryPage = ({
         <div className='back-button' onClick={() => {setPage(PageStatus.CREATING)}}>
           <BackButton />
         </div>
-        <div className='top-title-logo'>
-            <TopTitleLogo />
-        </div>
+        <img className='top-title-logo' src={TopTitleLogo} />
         <div className='top-title-right'></div>
       </div>
 

@@ -10,7 +10,7 @@ import { Icon, IconTypes } from '../Icon';
 import { ImageRenderer } from '../ImageRenderer';
 import { StylesBox } from './stylesBox';
 
-import TopTitleLogo from '../Icon/logo.svg'
+import TopTitleLogo from '../Icon/logo.png'
 import BackButton from '../Icon/left-arrow.svg'
 import Sparkle from '../../svgs/sparkle.svg';
 import CheckButton from '../Icon/check-button.svg'
@@ -41,7 +41,7 @@ export const CreationPage = ({
   const [itemColor, setItemColor] = useState<ColorTypes>(hairColor);
 
   return (
-    <div className={`${className} container`}>
+    <div className={`${className} creation-page__container container`}>
       {/* <div className='tree-creation-page__header'>
         <Icon
           className='tree-creation-page__header__back-button'
@@ -74,9 +74,7 @@ export const CreationPage = ({
         <div className='back-button' onClick={() => {setPage(PageStatus.SELECTING)}}>
           <BackButton />
         </div>
-        <div className='top-title-logo'>
-          <TopTitleLogo />
-        </div>
+        <img className='top-title-logo' src={TopTitleLogo} />
         <div className='top-title-right'>
           <div className='top-title-check-button'
             onClick={() => {

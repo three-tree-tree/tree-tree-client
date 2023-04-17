@@ -40,8 +40,9 @@
   width: 100%;
   height: fit-content;
   border-radius: 20px;
-  margin-bottom: calc(10px + 2vmin);
-  padding-top: 3vh;
+  margin-bottom: 20px;
+  padding: 26px;
+  box-sizing: border-box;
 }
 
 .tree-delivery-page__instagram-button {
@@ -59,39 +60,35 @@
 }
 
 .tree-delivery-page__popup-modal {
-  width: 84%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: calc(100% - 8vw);
+  overflow-y: scroll;
 }
 
 .tree-delivery-page__popup-modal_back {
-  position: absolute;
-  z-index: 500;
   text-align: center;
   background: white;
   color: #182E6A;
   border-radius: 20px;
-  padding: calc(17px + 2vmin);
+  padding:  26px;
   box-sizing: border-box;
 }
 
 .tree-delivery-page__popup-modal_back p {
-  margin-top: calc(26px + 2vmin);
+  padding-top: 30px;
 }
 
 .tree-delivery-page__popup-modal__title {
-  font-size: calc(8px + 2vmin);
+  font-size: 1.6rem;
   font-weight: 600;
-  padding-top: calc(9px + 2vmin);
-  padding-bottom: calc(26px + 2vmin);
+  padding-top: 14px;
+  padding-bottom: 30px;
   border-bottom: solid 1px #DEDEDE;
 }
 
 .tree-delivery-page__popup-modal_img {
   width: 100%;
-  margin-top: 10%;
+  margin-top: 30px;
 }
 
 .tree-delivery-page__popup-modal_txt {
@@ -105,8 +102,7 @@
 }
 .tree-delivery-page__tag-texts {
   width: var(--image-size);
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  margin-top: 26px;
   color: #182E6A;
 }
 
@@ -127,7 +123,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #0B3260;
-  padding: calc(12px + 2vmin) 0;
+  padding: 20px 0;
   font-weight: 600;
 }
 
@@ -141,7 +137,7 @@
 
 .delivery-page__button-list-wrap {
   width: 100%;
-  margin-bottom: 30px;
+  padding-bottom: 8vw;
 }
 
 .tree-delivery-page__copy {

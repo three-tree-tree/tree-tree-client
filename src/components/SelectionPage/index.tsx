@@ -7,7 +7,7 @@ import './index.css';
 import '../common.css'
 import { InterestingIssueType } from '../../lib/dux/initialState';
 
-import TopTitleLogo from '../Icon/logo.svg'
+import TopTitleLogo from '../Icon/logo.png'
 import BackButton from '../Icon/left-arrow.svg'
 import Sparkle from '../../svgs/sparkle.svg';
 
@@ -107,9 +107,7 @@ export const SelectionPage = ({
         <div className='back-button' onClick={() => {setPage(PageStatus.PROMISE)}}>
           <BackButton />
         </div>
-        <div className='top-title-logo'>
-            <TopTitleLogo />
-        </div>
+        <img className='top-title-logo' src={TopTitleLogo} />
         <div className='top-title-right'></div>
       </div>
       <div className='selection-page__content-wrap'>
