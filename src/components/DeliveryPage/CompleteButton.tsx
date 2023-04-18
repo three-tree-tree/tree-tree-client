@@ -13,7 +13,7 @@ interface CompleteButtonProps {
 }
 
 const SERVER_HOST = "https://wordway.cafe24.com"
-const HASH_TAG_MESSAGE = "#지구방위대_지구를지켜라 #지구방위대캠페인 #환경보호캠페인 #깨끗한지구만들기"
+const HASH_TAG_MESSAGE = "#그린가디언즈 #깨끗한지구만들기 #지구의날 #그린가디언즈_지구를지켜라"
 
 export const CompleteButton = ({
   className,
