@@ -18,6 +18,7 @@ import Sparkle from '../../svgs/sparkle.svg';
 
 const INSTAGRAM_FEED_URL = "https://www.instagram.com/explore/tags/%EC%A7%80%EA%B5%AC%EB%B0%A9%EC%9C%84%EB%8C%80_%EC%A7%80%EA%B5%AC%EB%A5%BC%EC%A7%80%EC%BC%9C%EB%9D%BC/"
 const SERVICE_HOST = "https://three-tree-tree.github.io/"
+const HASH_TAG_MESSAGE = "#그린가디언즈 #깨끗한지구만들기 #지구의날 #그린가디언즈_지구를지켜라"
 
 interface DeliveryPageProps {
   className?: string;
@@ -31,6 +32,7 @@ export const DeliveryPage = ({
 
   const [openPopUp, setOpenPopUp] = useState(false);
   const [openSharePopUp, setOpenSharePopUp] = useState(false);
+  const [openCopyPopUp, setOpenCopyPopUp] = useState(false);
 
   const handlePopUp = (open: boolean) => {
     setOpenPopUp(open);
@@ -45,6 +47,13 @@ export const DeliveryPage = ({
     setOpenSharePopUp(true);
     setTimeout(() => {
       setOpenSharePopUp(false);
+    }, 1500);
+  }
+
+  const handleCopyPopUp = () => {
+    setOpenCopyPopUp(true);
+    setTimeout(() => {
+      setOpenCopyPopUp(false);
     }, 1500);
   }
 
@@ -97,10 +106,12 @@ export const DeliveryPage = ({
               {imageSource && (
                 <img className='tree-delivery-page__custom-image' src={imageSource} />
               )}
-              <div className='tree-delivery-page__tag-texts'>
-              #그린가디언즈 #깨끗한지구만들기 <br/>
-              #지구의날 #그린가디언즈_지구를지켜라
-              </div>
+              <CopyToClipboard text={HASH_TAG_MESSAGE} onCopy={handleCopyPopUp}>
+                <div className='tree-delivery-page__tag-texts'>
+                  #그린가디언즈 #깨끗한지구만들기 <br/>
+                  #지구의날 #그린가디언즈_지구를지켜라
+                </div>
+              </CopyToClipboard>
             </div>
             <div>* 위의 이미지를 꾹 눌러 저장해주세요.</div>
           </div>
@@ -128,7 +139,8 @@ export const DeliveryPage = ({
         </>
       }
       { openPopUp === true && <CompletePopup className="tree-delivery-page__popup-modal" />}
-      { openSharePopUp === true && <SharePopup />}
+      { openSharePopUp === true && <SharePopup targetName="링크" />}
+      { openCopyPopUp === true && <SharePopup targetName="해시태그" />}
     </div>
   );
 };
