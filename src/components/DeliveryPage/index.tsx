@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import FileSaver from 'file-saver';
 
 import './index.css';
 
@@ -33,6 +34,11 @@ export const DeliveryPage = ({
 
   const handlePopUp = (open: boolean) => {
     setOpenPopUp(open);
+  }
+
+  const handleSaveFile = () => {
+    if (imageSource === null || imageSource === undefined) return;
+    FileSaver.saveAs(imageSource, "GreenGuardians.jpg")
   }
 
   const handleSharePopUp = () => {
@@ -100,7 +106,10 @@ export const DeliveryPage = ({
           </div>
           
           <div className='delivery-page__button-list-wrap'>      
-            <CompleteButton className='tree-delivery-page__instagram-button' popupFun={handlePopUp}/>
+            <CompleteButton
+              className='tree-delivery-page__instagram-button'
+              handleSaveFile={handleSaveFile}
+              popupFun={handlePopUp} />
             <div className='tree-delivery-page__button-wrapper'>
               <Button
                 className='tree-delivery-page__retry'

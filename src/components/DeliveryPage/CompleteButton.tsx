@@ -2,14 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
-import { Button, ButtonTypes } from '../Button';
-
 import './index.css';
 import IcNextButton from '../Icon/next-button.svg'
 
 interface CompleteButtonProps {
   className?: string;
   popupFun: (open: boolean) => void;
+  handleSaveFile: () => void;
 }
 
 const SERVER_HOST = "https://wordway.cafe24.com"
@@ -18,8 +17,10 @@ const HASH_TAG_MESSAGE = "#그린가디언즈 #깨끗한지구만들기 #지구�
 export const CompleteButton = ({
   className,
   popupFun,
+  handleSaveFile,
 }: CompleteButtonProps): React.ReactElement => {
-    const handleOnCopy = () => {
+    const handleOnCopy = (imageFile: Blob | string) => {
+      handleSaveFile()
       popupFun(true);
       // visit count ++ 
       postJoin();
