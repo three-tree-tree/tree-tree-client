@@ -4,16 +4,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: calc(calc(100% - 96px) - 8vw);
   border-radius: 20px;
   background-color: #FFFFFF;
   color: #182E6A;
   box-sizing: border-box;
   padding: 26px;
   padding-bottom: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: relative;
 }
 
 .promise-page__content-area {

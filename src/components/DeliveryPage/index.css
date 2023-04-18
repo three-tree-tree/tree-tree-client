@@ -1,34 +1,3 @@
-.tree-delivery-page {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.tree-delivery-page__header {
-  position: relative;
-  width: 100%;
-  height: 5vh;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2vh;
-}
-
-.tree-delivery-page__header__back-button {
-  position: absolute;
-  left: 50px;
-}
-
-.tree-delivery-page__main-content {
-  width: 60%;
-  margin-top: 5%;
-}
-
 .tree-delivery-page__image-box {
   position: relative;
   display: inline-flex;
@@ -60,8 +29,7 @@
 }
 
 .tree-delivery-page__popup-modal {
-  width: 100%;
-  height: calc(100% - 8vw);
+  width: 84vmin;
   overflow-y: scroll;
 }
 
@@ -72,6 +40,10 @@
   border-radius: 20px;
   padding:  26px;
   box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .tree-delivery-page__popup-modal_back p {
@@ -117,7 +89,7 @@
 
 
 .tree-delivery-page__share-popup {
-  width: 84%;
+  width: 84vmin;
   position: fixed;
   top: 90%;
   left: 50%;
@@ -137,7 +109,7 @@
 
 .delivery-page__button-list-wrap {
   width: 100%;
-  padding-bottom: 8vw;
+  padding-bottom: 30px;
 }
 
 .tree-delivery-page__copy {

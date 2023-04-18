@@ -10,7 +10,7 @@
 :root {
   font-size: 62.5%;
   width: 100%;
-  --image-size: calc(84vw - 52px);
+  --image-size: calc(84vmin - 52px);
 }
 
 .background-wrap {
@@ -19,4 +19,16 @@
   position: fixed;
   z-index: -100;
   background: linear-gradient(180deg, #0E57FF 2%, #00CAFF 100%);
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 68.75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 75%;
+  }
 }

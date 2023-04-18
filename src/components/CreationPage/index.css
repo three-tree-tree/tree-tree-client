@@ -1,31 +1,3 @@
-.tree-creation-page {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.tree-creation-page__header {
-  position: relative;
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2vh;
-}
-
-.tree-creation-page__header__back-button {
-  position: relative;
-  left: 50px;
-}
-.tree-creation-page__header__confirm-button {
-  position: relative;
-  right: 50px;
-}
-
 .tree-creation-page__creating-box {
   display: inline-flex;
   flex-direction: column;
@@ -55,16 +27,16 @@
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  margin-top: 2vh;
+  margin-top: 2vmin;
   flex-direction: row;
   align-items: center;
-  padding-bottom: 2vh;
+  padding-bottom: 2vmin;
   border-bottom: 1px solid gray;
 }
 
 .creating-control-box__menu__item {
   display: inline-flex;
-  width: 14vw;
+  width: 14vmin;
 }
 
 .creating-control-box__colors {
@@ -72,14 +44,14 @@
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2vh 0 2vh;
+  margin: 2vmin 0 2vmin;
 }
 
 .creating-control-box__colors__item {
-  width: 4vw;
-  height: 4vw;
+  width: 4vmin;
+  height: 4vmin;
   border-radius: 50%;
-  border: 0.3vw solid #0A13FF;
+  border: 0.3vmin solid #0A13FF;
 }
 
 .color-red {
@@ -131,7 +103,7 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 2vh;
+  margin-bottom: 2vmin;
 }
 
 .tree-styles-box__row:last-child {
@@ -148,6 +120,6 @@
 }
 
 .creation-page__container.container {
-  padding-bottom: 8vw;
+  padding-bottom: 30px;
   height: auto;
 }
