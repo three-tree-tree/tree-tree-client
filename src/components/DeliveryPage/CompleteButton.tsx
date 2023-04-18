@@ -19,6 +19,11 @@ export const CompleteButton = ({
   popupFun,
   handleSaveFile,
 }: CompleteButtonProps): React.ReactElement => {
+    const isMobile = () => {
+      const userAgent = navigator.userAgent;
+      return /Mobi/i.test(userAgent);
+    }
+
     const handleOnCopy = (imageFile: Blob | string) => {
       // handleSaveFile() // 운영 체제에 따라 다르게 동작하므로 제거
       popupFun(true);
@@ -27,7 +32,11 @@ export const CompleteButton = ({
       setTimeout(() => {
         popupFun(false);
         // instagram app link로 이동
-        window.location.href = "instagram://";
+        if (isMobile()) {
+          window.location.href = "instagram://";
+        } else {
+          window.location.href = "https://www.instagram.com/";
+        }
       }, 3000);
     }
 
