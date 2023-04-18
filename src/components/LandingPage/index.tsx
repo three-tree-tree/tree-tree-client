@@ -51,7 +51,7 @@ export const LandingPage = ({
   }
 
   return (
-    <div className='`${className} landing-page__container'>
+    <div className={`${className} landing-page__container`}>
       <div className='landing-page__title-logo'>
         <img className='landing-page__title-logo-img' src={TopLogo} />
       </div>
