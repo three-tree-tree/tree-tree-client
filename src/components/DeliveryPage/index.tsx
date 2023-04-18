@@ -102,7 +102,7 @@ export const DeliveryPage = ({
               #지구의날 #그린가디언즈_지구를지켜라
               </div>
             </div>
-            <div>* 위의 이미지를 꾹 누르면 이미지가 저장됩니다.</div>
+            <div>* 위의 이미지를 꾹 눌러 저장해주세요.</div>
           </div>
           
           <div className='delivery-page__button-list-wrap'>      

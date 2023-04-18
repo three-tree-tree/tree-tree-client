@@ -20,7 +20,7 @@ export const CompleteButton = ({
   handleSaveFile,
 }: CompleteButtonProps): React.ReactElement => {
     const handleOnCopy = (imageFile: Blob | string) => {
-      handleSaveFile()
+      // handleSaveFile() // 운영 체제에 따라 다르게 동작하므로 제거
       popupFun(true);
       // visit count ++ 
       postJoin();
